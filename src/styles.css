@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+
+.is-spaced {
+  margin-top: 1.5rem;
+}
+
+.mat-progress-spinner circle {
+  stroke: violet;
+}
+
+.mat-progress-spinner {
+  margin-left: auto;
+  margin-right: auto;
+}

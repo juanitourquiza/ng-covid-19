@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+}
+
+table td {
+  vertical-align: middle;
+  font-size: 1em;
+}
+
+table th {
+  vertical-align: middle;
+}
+
+.container-table {
+  height: 600px;
+  overflow: auto;
+}
+
+th.mat-header-cell:first-of-type {
+  padding-left: 0;
+}
+
+td.mat-cell:first-of-type {
+  padding-left: 0;
+  font-size: 0.9em;
+}
+
+.rate {
+  font-size: 0.8em;
+}

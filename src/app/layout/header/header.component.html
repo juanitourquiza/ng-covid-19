@@ -1,0 +1,35 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a href="./" title="COVID-19"><h1 class="nav-item title">COVID-19</h1></a>
+    <a role="button" class="navbar-burger burger" (click)="expand()" aria-label="menu" aria-expanded="false"
+      data-target="menu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="menu" class="navbar-menu" [class.is-active]="isActive">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <a class="navbar-item" href="https://www.gouvernement.fr/info-coronavirus" target="new">
+          Informations
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Télécharger les attestations
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item"
+              href="https://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2020/03/attestation_de_deplacement_derogatoire.pdf" target="new">
+              Attestation individuelle
+            </a>
+            <a class="navbar-item"
+              href="https://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2020/03/justificatif_de_deplacement_professionnel.pdf" target="new">
+              Attestation employeur
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
