@@ -23,4 +23,8 @@ Run `npm run build:prod` to build the project for a production build. The build 
 - Bulma : https://github.com/jgthms/bulma
 - ng-apexcharts : https://github.com/apexcharts/ng-apexcharts
 
+## Contribution
+Feel free to contribute :)
+
+
 
