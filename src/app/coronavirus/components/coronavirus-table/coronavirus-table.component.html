@@ -1,6 +1,5 @@
-<ng-container *ngIf="detailedStats.value && detailedStats.value.length > 0">
-  <div class="is-spaced" [class.container-table]="detailedStats.value.length > 20">
 
+  <div class="is-spaced" [class.container-table]="detailedStats.length > 20">
     <table aria-describedby="tableDescription" mat-table matSort [dataSource]="dataSource" [matSortDisableClear]="true" matSortActive="cases" matSortDirection="desc">
 
       <!-- Country Column -->
@@ -53,18 +52,4 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   </div>
-</ng-container>
-<ng-container *ngIf="detailedStats.loading">
-  <mat-spinner [diameter]="60" class="spinner is-spaced"></mat-spinner>
-</ng-container>
-<ng-container *ngIf="(detailedStats.value && detailedStats.value.length === 0) && !detailedStats.loading">
-  <article class="message is-danger is-spaced">
-    <div class="message-header">
-      <p>Données indisponibles</p>
-    </div>
-    <div class="message-body">
-      Nous n'avons pas trouvé de données.
-    </div>
-  </article>
-</ng-container>
 

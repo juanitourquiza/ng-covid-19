@@ -7,7 +7,8 @@
           <select name="country" id="country-select" (change)="onSelectCountry($event.target.value)">
             <option selected>Monde</option>
             <option>France</option>
-            <option *ngFor="let country of countries.value | keyvalue; trackByFn" [value]="country | json">{{country.key}}
+            <option *ngFor="let country of countries.value | keyvalue; trackByFn" [value]="country | json">
+              {{country.key}}
             </option>
           </select>
         </div>
@@ -22,7 +23,23 @@
     </app-coronavirus-stats>
   </ng-container>
   <ng-container *ngIf="(detailedStats$ | loading | async) as detailedStats">
-    <app-coronavirus-table [detailedStats]="detailedStats" [selectedCountry]="selectedCountry"></app-coronavirus-table>
+    <ng-container *ngIf="detailedStats.value && detailedStats.value.length > 0">
+      <app-coronavirus-table [detailedStats]="detailedStats.value" [selectedCountry]="selectedCountry">
+      </app-coronavirus-table>
+    </ng-container>
+    <ng-container *ngIf="detailedStats.loading">
+      <mat-spinner [diameter]="60" class="spinner is-spaced"></mat-spinner>
+    </ng-container>
+    <ng-container *ngIf="(detailedStats.value && detailedStats.value.length === 0) && !detailedStats.loading">
+      <article class="message is-danger is-spaced">
+        <div class="message-header">
+          <p>Données indisponibles</p>
+        </div>
+        <div class="message-body">
+          Nous n'avons pas trouvé de données.
+        </div>
+      </article>
+    </ng-container>
   </ng-container>
   <h1 class="title is-spaced">L'avancée du coronavirus sur les 15 derniers jours</h1>
   <div class="columns">
@@ -34,4 +51,3 @@
     </div>
   </div>
 </ng-container>
-

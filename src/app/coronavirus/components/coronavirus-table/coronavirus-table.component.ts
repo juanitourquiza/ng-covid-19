@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ChangeDetectionStrategy, AfterViewInit, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -8,7 +8,7 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./coronavirus-table.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CoronavirusTableComponent implements OnChanges {
+export class CoronavirusTableComponent implements OnInit {
 
   @Input() detailedStats;
   @Input() selectedCountry;
@@ -16,12 +16,10 @@ export class CoronavirusTableComponent implements OnChanges {
   displayedColumns: string[] = [];
   dataSource: any;
 
-  ngOnChanges(): void {
+  ngOnInit(): void {
     this.initDisplayColumns();
-    if (this.detailedStats.value) {
-      this.dataSource = new MatTableDataSource(this.detailedStats.value);
-      this.dataSource.sort = this.sort;
-    }
+    this.dataSource = new MatTableDataSource(this.detailedStats);
+    this.dataSource.sort = this.sort;
   }
 
   private initDisplayColumns(): void {
