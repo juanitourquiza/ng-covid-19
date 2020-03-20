@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1584716927706,
+  "timestamp": 1584744264977,
   "index": "ng-covid-19/index.html",
   "assetGroups": [
     {
@@ -8,8 +8,8 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "ng-covid-19/5-es2015.773f5f4f49b8713b1bd1.js",
-        "ng-covid-19/5-es5.773f5f4f49b8713b1bd1.js",
+        "ng-covid-19/5-es2015.9459573eec03d9ee9d63.js",
+        "ng-covid-19/5-es5.9459573eec03d9ee9d63.js",
         "ng-covid-19/favicon.ico",
         "ng-covid-19/index.html",
         "ng-covid-19/main-es2015.88f528aa87fd72fe37e6.js",
@@ -17,8 +17,8 @@
         "ng-covid-19/manifest.webmanifest",
         "ng-covid-19/polyfills-es2015.1f913f16a2d346cc8bdc.js",
         "ng-covid-19/polyfills-es5.1a3c78b07cd6f16c6e9a.js",
-        "ng-covid-19/runtime-es2015.4cb220ebbb47626ae92e.js",
-        "ng-covid-19/runtime-es5.4cb220ebbb47626ae92e.js",
+        "ng-covid-19/runtime-es2015.6b112ec01f150dce40f0.js",
+        "ng-covid-19/runtime-es5.6b112ec01f150dce40f0.js",
         "ng-covid-19/styles.fbab10b21832c888cc07.css"
       ],
       "patterns": []
@@ -42,8 +42,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "ng-covid-19/5-es2015.773f5f4f49b8713b1bd1.js": "0378d6dd843499b80f364f42097ff9d70f35c058",
-    "ng-covid-19/5-es5.773f5f4f49b8713b1bd1.js": "7291d407600d3e70c5abfae0e9f1e80de096aa3f",
+    "ng-covid-19/5-es2015.9459573eec03d9ee9d63.js": "a6542520403af5af8edc098fb83b3f6b7be9876b",
+    "ng-covid-19/5-es5.9459573eec03d9ee9d63.js": "2ab652c78c1d987dc3edde70e26d26e4068ace20",
     "ng-covid-19/assets/icons/icon-128x128.png": "56f326224e0b75eccc2bd2a46b409dbad41d32c8",
     "ng-covid-19/assets/icons/icon-144x144.png": "707840dc305a6adc78d447f34a5ae4b7b2cbc9fc",
     "ng-covid-19/assets/icons/icon-152x152.png": "07c8b3f9da6760d65fbe576e9018eebd38634c9d",
@@ -53,14 +53,14 @@
     "ng-covid-19/assets/icons/icon-72x72.png": "b185ac3755e3609ebaa2d3f29c8cf16b3d2ea0ab",
     "ng-covid-19/assets/icons/icon-96x96.png": "4eb3bbddecf67205fda0d4b4cb96b0335d7729c7",
     "ng-covid-19/favicon.ico": "b6921f72d93286a6dfbc403c16cb07e5901024c3",
-    "ng-covid-19/index.html": "3310b35edf47751ebf235ce57cf02d6d8e7c31d8",
+    "ng-covid-19/index.html": "5b77cf7233582f2f31a595ae382c454a927e0452",
     "ng-covid-19/main-es2015.88f528aa87fd72fe37e6.js": "84b8ee1b039d126e6c788a48f0588712f4d52a09",
     "ng-covid-19/main-es5.88f528aa87fd72fe37e6.js": "863011c97c32a4211aa663e518ad4bff000e007f",
     "ng-covid-19/manifest.webmanifest": "664baf34b117458093a4085af6f765bfe8472b4c",
     "ng-covid-19/polyfills-es2015.1f913f16a2d346cc8bdc.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "ng-covid-19/polyfills-es5.1a3c78b07cd6f16c6e9a.js": "0a14b45481c8e41b507ffe0607f3e8b2b73628f6",
-    "ng-covid-19/runtime-es2015.4cb220ebbb47626ae92e.js": "3c14d482178a44352095a5dbc3eb7a2a85db3d34",
-    "ng-covid-19/runtime-es5.4cb220ebbb47626ae92e.js": "e16f82fdaa40ba79667f07ac2fbfad9c5e6268e3",
+    "ng-covid-19/runtime-es2015.6b112ec01f150dce40f0.js": "64247d0bf99b0bd2224ee52bd9bb4367313b6bbf",
+    "ng-covid-19/runtime-es5.6b112ec01f150dce40f0.js": "905f5f082cefa7497bb56a64a91441e14bbd92f9",
     "ng-covid-19/styles.fbab10b21832c888cc07.css": "4034f4af2d2a3287d05038be818ed6bf6f0d707c"
   },
   "navigationUrls": [

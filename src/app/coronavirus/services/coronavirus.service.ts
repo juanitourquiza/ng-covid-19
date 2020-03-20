@@ -25,11 +25,27 @@ export class CoronavirusService {
   }
 
   getMainStats(): Observable<MainStat> {
-    return this.httpClient.get(`${this.url}`);
+    return this.httpClient.get(`${this.url}`).pipe(
+      map((item: any) => ({
+        ...item,
+        cases: item.confirmed.value,
+        deaths: item.deaths.value,
+        recovered: item.recovered.value
+      })));
   }
 
   getMainStatsByCountries(country: string): Observable<MainStat> {
-    return this.httpClient.get(`${this.url}/countries/${country}`);
+    return this.httpClient.get(`${this.url}/countries/${country}`).pipe(
+      map((item: any) => ({
+        ...item,
+        cases: item.confirmed.value,
+        deaths: item.deaths.value,
+        recovered: item.recovered.value
+      })));
+  }
+
+  getMainDetailedStatsByCountries(country: string): Observable<MainStat> {
+    return this.httpClient.get(`${this.url2}/countries/${country}`);
   }
 
   getWorldDetailedStats(): Observable<DetailedStat> {
@@ -98,7 +114,7 @@ export class CoronavirusService {
       }));
   }
 
-    getDailyDatas(): Observable<any> {
+  getDailyDatas(): Observable<any> {
     return this.httpClient.get(`${this.url}/daily`);
   }
 

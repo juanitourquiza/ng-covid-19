@@ -22,7 +22,7 @@ export class CoronavirusComponent implements OnInit {
 
   ngOnInit(): void {
     this.data$ = this.coronavirusService.getDailyDatas();
-    this.mainStatsFrance$ = this.coronavirusService.getMainStatsByCountries('FR');
+    this.mainStatsFrance$ = this.coronavirusService.getMainDetailedStatsByCountries('france');
     this.mainStats$ = this.coronavirusService.getMainStats();
     this.detailedStats$ = this.coronavirusService.getWorldDetailedStats();
     this.countries$ = this.coronavirusService.getCountries();
@@ -41,7 +41,7 @@ export class CoronavirusComponent implements OnInit {
     } else if (country === 'France') {
       this.selectedCountry = country;
       this.mainStatsFrance$ = undefined;
-      this.mainStats$ = this.coronavirusService.getMainStatsByCountries('FR');
+      this.mainStats$ = this.coronavirusService.getMainDetailedStatsByCountries('france');
       this.detailedStats$ = this.coronavirusService.getFranceStats();
     } else {
       const countryValue = JSON.parse(country).value;
