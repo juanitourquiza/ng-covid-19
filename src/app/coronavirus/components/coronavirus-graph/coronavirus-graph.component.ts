@@ -58,7 +58,7 @@ export class CoronavirusGraphComponent implements OnInit {
           data: this.totalConfirmed
         },
         {
-          name: "Confirmado",
+          name: "Curados",
           data: this.totalRecovered
         }
       ],
