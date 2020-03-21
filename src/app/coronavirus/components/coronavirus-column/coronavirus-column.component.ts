@@ -1,4 +1,10 @@
-import { Component, OnInit, Input, ViewChild, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  ChangeDetectionStrategy
+} from "@angular/core";
 import {
   ApexAxisChartSeries,
   ApexChart,
@@ -11,7 +17,7 @@ import {
   ApexXAxis,
   ApexFill,
   ApexTooltip
-} from 'ng-apexcharts';
+} from "ng-apexcharts";
 
 export interface ChartOptions {
   series: ApexAxisChartSeries;
@@ -27,22 +33,21 @@ export interface ChartOptions {
 }
 
 @Component({
-  selector: 'app-coronavirus-column',
-  templateUrl: './coronavirus-column.component.html',
-  styleUrls: ['./coronavirus-column.component.css'],
+  selector: "app-coronavirus-column",
+  templateUrl: "./coronavirus-column.component.html",
+  styleUrls: ["./coronavirus-column.component.css"],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoronavirusColumnComponent implements OnInit {
-
   @Input() data;
-  @ViewChild('chart') chart: ChartComponent;
+  @ViewChild("chart") chart: ChartComponent;
 
   chartOptions: Partial<ChartOptions>;
   chinaConfirmed: number[] = [];
   otherConfirmed: number[] = [];
   dates: string[] = [];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.initDatas();
@@ -53,17 +58,17 @@ export class CoronavirusColumnComponent implements OnInit {
     this.chartOptions = {
       series: [
         {
-          name: 'Chine',
+          name: "China",
           data: this.chinaConfirmed
         },
         {
-          name: 'Reste du monde',
+          name: "Resto del mundo",
           data: this.otherConfirmed
         }
       ],
       chart: {
-        type: 'bar',
-        height: 'auto',
+        type: "bar",
+        height: "auto",
         toolbar: {
           show: false
         }
@@ -71,8 +76,8 @@ export class CoronavirusColumnComponent implements OnInit {
       plotOptions: {
         bar: {
           horizontal: false,
-          columnWidth: '55%',
-          endingShape: 'rounded'
+          columnWidth: "55%",
+          endingShape: "rounded"
         }
       },
       dataLabels: {
@@ -81,14 +86,14 @@ export class CoronavirusColumnComponent implements OnInit {
       stroke: {
         show: true,
         width: 2,
-        colors: ['transparent']
+        colors: ["transparent"]
       },
       xaxis: {
         categories: this.dates
       },
       yaxis: {
         title: {
-          text: 'Nombre de cas'
+          text: "Nombre de cas"
         }
       },
       fill: {
@@ -106,5 +111,4 @@ export class CoronavirusColumnComponent implements OnInit {
       }
     });
   }
-
 }

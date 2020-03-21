@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "ng-coronavirus"
+  "defaultProject": "ng-coronavirus",
+  "cli": {
+    "analytics": false
+  }
 }

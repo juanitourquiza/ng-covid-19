@@ -1,9 +1,9 @@
-<h1 class="title is-spaced" id="tableDescription" *ngIf="selectedCountry">Statistiques {{selectedCountry}}</h1>
-<h1 class="title is-spaced" id="tableDescription" *ngIf="!selectedCountry">Statistiques France</h1>
+<h1 class="title is-spaced" id="tableDescription" *ngIf="selectedCountry">Estadísticas {{selectedCountry}}</h1>
+<h1 class="title is-spaced" id="tableDescription" *ngIf="!selectedCountry">Estadísticas Ecuador</h1>
 <div class="content">
   <ng-container *ngIf="mainStats.value">
     <p>
-      Mis à jour le <strong>{{mainStats.value.lastUpdate | date: 'dd/MM/yyyy à HH:MM'}}</strong>
+      Actualizado el <strong>{{mainStats.value.lastUpdate | date: 'dd/MM/yyyy a HH:MM'}}</strong>
     </p>
     <div class="tile is-ancestor">
       <div class="tile is-parent">
@@ -13,13 +13,13 @@
               {{data[data.length - 1].deltaConfirmed  | symbolNumber}}
             </span>
           </p>
-          <p class="subtitle">Cas recensés</p>
+          <p class="subtitle">Casos identificados</p>
         </article>
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-dark">
           <p class="title">{{mainStats.value.deaths.value}}</p>
-          <p class="subtitle">Morts</p>
+          <p class="subtitle">Muertos</p>
         </article>
       </div>
       <div class="tile is-parent">
@@ -30,7 +30,7 @@
               {{data[data.length - 1].deltaRecovered | symbolNumber}}
             </span>
           </p>
-          <p class="subtitle">Guéris</p>
+          <p class="subtitle">Recuperados</p>
         </article>
       </div>
     </div>
@@ -41,10 +41,10 @@
   <ng-container *ngIf="!mainStats.value && !mainStats.loading">
     <article class="message is-danger">
       <div class="message-header">
-        <p>Données indisponibles</p>
+        <p>Datos no disponibles.</p>
       </div>
       <div class="message-body">
-        Nous n'avons pas trouvé de données.
+        No encontramos ningún dato.
       </div>
     </article>
   </ng-container>

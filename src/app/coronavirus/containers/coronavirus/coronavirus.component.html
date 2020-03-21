@@ -1,12 +1,12 @@
 <ng-container *ngIf="(data$ | async) as data">
   <ng-container *ngIf="(countries$ | loading | async) as countries">
     <div class="content">
-      <label class="label" for="country-select">Choisis un pays</label>
+      <label class="label" for="country-select">Escoja un país</label>
       <div class="control">
         <div class="select">
           <select name="country" id="country-select" (change)="onSelectCountry($event.target.value)">
-            <option selected>Monde</option>
-            <option>France</option>
+            <option selected>Mundo</option>
+            <option>Ecuador</option>
             <option *ngFor="let country of countries.value | keyvalue; trackByFn" [value]="country | json">
               {{country.key}}
             </option>
@@ -15,7 +15,7 @@
       </div>
     </div>
   </ng-container>
-  <ng-container *ngIf="(mainStatsFrance$ | loading | async) as mainStats">
+  <ng-container *ngIf="(mainStatsEcuador$ | loading | async) as mainStats">
     <app-coronavirus-stats [mainStats]="mainStats" [data]="data"></app-coronavirus-stats>
   </ng-container>
   <ng-container *ngIf="(mainStats$ | loading | async) as mainStats">
@@ -33,15 +33,15 @@
     <ng-container *ngIf="(detailedStats.value && detailedStats.value.length === 0) && !detailedStats.loading">
       <article class="message is-danger is-spaced">
         <div class="message-header">
-          <p>Données indisponibles</p>
+          <p>Datos no disponibles.</p>
         </div>
         <div class="message-body">
-          Nous n'avons pas trouvé de données.
+          No encontramos ningún dato.
         </div>
       </article>
     </ng-container>
   </ng-container>
-  <h1 class="title is-spaced">L'avancée du coronavirus sur les 15 derniers jours</h1>
+  <h1 class="title is-spaced">El progreso del coronavirus en los últimos 15 días.</h1>
   <div class="columns">
     <div class="column">
       <app-coronavirus-graph [data]="data"></app-coronavirus-graph>

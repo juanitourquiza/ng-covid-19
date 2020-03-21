@@ -1,4 +1,10 @@
-import { Component, OnInit, Input, ViewChild, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  ChangeDetectionStrategy
+} from "@angular/core";
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -11,8 +17,7 @@ import {
   ApexGrid,
   ApexTitleSubtitle,
   ApexLegend
-} from 'ng-apexcharts';
-
+} from "ng-apexcharts";
 
 export interface ChartOptions {
   series: ApexAxisChartSeries;
@@ -29,38 +34,37 @@ export interface ChartOptions {
 }
 
 @Component({
-  selector: 'app-coronavirus-graph',
-  templateUrl: './coronavirus-graph.component.html',
-  styleUrls: ['./coronavirus-graph.component.css'],
+  selector: "app-coronavirus-graph",
+  templateUrl: "./coronavirus-graph.component.html",
+  styleUrls: ["./coronavirus-graph.component.css"],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoronavirusGraphComponent implements OnInit {
-
   @Input() data;
-  @ViewChild('chart') chart: ChartComponent;
+  @ViewChild("chart") chart: ChartComponent;
   totalConfirmed: number[] = [];
   totalRecovered: number[] = [];
   dates: string[] = [];
   chartOptions: Partial<ChartOptions>;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.initDatas();
     this.chartOptions = {
       series: [
         {
-          name: 'Confirmés',
+          name: "Confirmados",
           data: this.totalConfirmed
         },
         {
-          name: 'Guéris',
+          name: "Confirmado",
           data: this.totalRecovered
         }
       ],
       chart: {
-        height: 'auto',
-        type: 'line',
+        height: "auto",
+        type: "line",
         toolbar: {
           show: false
         }
@@ -70,16 +74,16 @@ export class CoronavirusGraphComponent implements OnInit {
       },
 
       title: {
-        text: 'Cas de coronavirus dans le monde',
-        align: 'left'
+        text: "Casos de coronavirus en todo el mundo",
+        align: "left"
       },
       legend: {
         tooltipHoverFormatter(val, opts) {
           return (
             val +
-            ' - <strong>' +
+            " - <strong>" +
             opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
-            '</strong>'
+            "</strong>"
           );
         }
       },
@@ -121,7 +125,7 @@ export class CoronavirusGraphComponent implements OnInit {
         ]
       },
       grid: {
-        borderColor: '#f1f1f1',
+        borderColor: "#f1f1f1"
       }
     };
   }
