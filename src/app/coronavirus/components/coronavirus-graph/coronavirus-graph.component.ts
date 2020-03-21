@@ -12,6 +12,7 @@ import {
   ApexTitleSubtitle,
   ApexLegend
 } from 'ng-apexcharts';
+import { DatePipe } from '@angular/common';
 
 
 export interface ChartOptions {
@@ -22,6 +23,7 @@ export interface ChartOptions {
   dataLabels: ApexDataLabels;
   markers: ApexMarkers;
   tooltip: any; // ApexTooltip;
+  colors: string[];
   yaxis: ApexYAxis;
   grid: ApexGrid;
   legend: ApexLegend;
@@ -37,29 +39,37 @@ export interface ChartOptions {
 export class CoronavirusGraphComponent implements OnInit {
 
   @Input() data;
+  @Input() dataDeaths;
+  @Input() dataRecovered;
+  @Input() dataConfirmed;
   @ViewChild('chart') chart: ChartComponent;
   totalConfirmed: number[] = [];
   totalRecovered: number[] = [];
+  totalDeaths: number[] = [];
   dates: string[] = [];
   chartOptions: Partial<ChartOptions>;
-
-  constructor() { }
+  constructor(private readonly datePipe: DatePipe) { }
 
   ngOnInit(): void {
     this.initDatas();
     this.chartOptions = {
       series: [
         {
-          name: 'Confirmés',
+          name: 'Recensés',
           data: this.totalConfirmed
         },
         {
           name: 'Guéris',
           data: this.totalRecovered
+        },
+        {
+          name: 'Morts',
+          data: this.totalDeaths
         }
       ],
+      colors: ['#f14668', '#00d1b2', '#363636'],
       chart: {
-        height: 'auto',
+        height: '400px',
         type: 'line',
         toolbar: {
           show: false
@@ -68,16 +78,15 @@ export class CoronavirusGraphComponent implements OnInit {
       dataLabels: {
         enabled: false
       },
-
       title: {
-        text: 'Cas de coronavirus dans le monde',
+        text: 'Cas de coronavirus',
         align: 'left'
       },
       legend: {
         tooltipHoverFormatter(val, opts) {
           return (
             val +
-            ' - <strong>' +
+            ' : <strong>' +
             opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
             '</strong>'
           );
@@ -127,12 +136,32 @@ export class CoronavirusGraphComponent implements OnInit {
   }
 
   private initDatas(): void {
-    this.data.forEach((element, index) => {
-      if (this.data.length - index < 15) {
-        this.totalConfirmed.push(element.totalConfirmed);
-        this.dates.push(element.reportDateString);
-        this.totalRecovered.push(element.totalRecovered);
-      }
-    });
+    if (this.data) {
+      this.data.forEach((element, index) => {
+        if (this.data.length - index < 15) {
+          this.totalConfirmed.push(element.totalConfirmed);
+          this.dates.push(this.datePipe.transform(element.reportDateString, 'dd/MM'));
+          this.totalRecovered.push(element.totalRecovered);
+        }
+      });
+    } else {
+      this.dataDeaths.forEach((element, index) => {
+        if (this.dataDeaths.length - index < 15) {
+          this.dates.push(this.datePipe.transform(element.date, 'dd/MM'));
+          this.totalDeaths.push(element.totalCases);
+        }
+      });
+      this.dataConfirmed.forEach((element, index) => {
+        if (this.dataDeaths.length - index < 15) {
+          this.totalConfirmed.push(element.totalCases);
+        }
+      });
+      this.dataRecovered.forEach((element, index) => {
+        if (this.dataDeaths.length - index < 15) {
+          this.totalRecovered.push(element.totalCases);
+        }
+      });
+    }
+
   }
 }

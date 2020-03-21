@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { DetailedStat, MainStat } from '@coronavirus/models/coronavirus.models';
-import { map } from 'rxjs/operators';
+import { map, filter } from 'rxjs/operators';
 import * as Papa from 'papaparse';
 
 @Injectable({
@@ -13,6 +13,7 @@ export class CoronavirusService {
   private readonly url = 'https://covid19.mathdro.id/api';
   private readonly url2 = 'https://corona.lmao.ninja';
   private readonly urlGouv = 'https://www.data.gouv.fr/fr';
+  private readonly urlCovidApi = 'https://api.covid19api.com';
 
   constructor(private readonly httpClient: HttpClient) { }
 
@@ -22,6 +23,11 @@ export class CoronavirusService {
         delete list.countries.France;
         return list.countries;
       }));
+  }
+
+  getCountriesFromCovidApi(): Observable<any> {
+    return this.httpClient.get(`${this.urlCovidApi}/countries`).pipe(
+      filter((countryItem: any) => countryItem.Country !== 'France'));
   }
 
   getMainStats(): Observable<MainStat> {
@@ -34,6 +40,19 @@ export class CoronavirusService {
       })));
   }
 
+  getMainStatsFromNovel(country: string): Observable<MainStat> {
+    return this.httpClient.get(`${this.url2}/countries`).pipe(
+      map((list: any) =>
+        list
+          .filter((countryItem: any) => countryItem.country === country)
+          .map((item: any) =>
+            ({
+              ...item,
+              lastUpdate: list.Date
+            }))[0])
+    );
+  }
+
   getMainStatsByCountries(country: string): Observable<MainStat> {
     return this.httpClient.get(`${this.url}/countries/${country}`).pipe(
       map((item: any) => ({
@@ -41,7 +60,8 @@ export class CoronavirusService {
         cases: item.confirmed.value,
         deaths: item.deaths.value,
         recovered: item.recovered.value
-      })));
+      }))
+    );
   }
 
   getMainDetailedStatsByCountries(country: string): Observable<MainStat> {
@@ -116,6 +136,18 @@ export class CoronavirusService {
 
   getDailyDatas(): Observable<any> {
     return this.httpClient.get(`${this.url}/daily`);
+  }
+
+  getDailyDatasByCountry(country: string, status: string): Observable<any> {
+    return this.httpClient.get(`${this.urlCovidApi}/total/country/${country}/status/${status}`).pipe(
+      map((list: any) =>
+        list.map(item =>
+          ({
+            ...item,
+            date: item.Date,
+            totalCases: item.Cases,
+          })))
+    );
   }
 
 }

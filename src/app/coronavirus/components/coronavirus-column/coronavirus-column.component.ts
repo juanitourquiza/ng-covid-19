@@ -12,12 +12,14 @@ import {
   ApexFill,
   ApexTooltip
 } from 'ng-apexcharts';
+import { DatePipe } from '@angular/common';
 
 export interface ChartOptions {
   series: ApexAxisChartSeries;
   chart: ApexChart;
   dataLabels: ApexDataLabels;
   plotOptions: ApexPlotOptions;
+  colors: string[];
   yaxis: ApexYAxis;
   xaxis: ApexXAxis;
   fill: ApexFill;
@@ -42,7 +44,7 @@ export class CoronavirusColumnComponent implements OnInit {
   otherConfirmed: number[] = [];
   dates: string[] = [];
 
-  constructor() { }
+  constructor(private readonly datePipe: DatePipe) { }
 
   ngOnInit(): void {
     this.initDatas();
@@ -61,6 +63,7 @@ export class CoronavirusColumnComponent implements OnInit {
           data: this.otherConfirmed
         }
       ],
+      colors: ['#FF0000', '#00BFFF'],
       chart: {
         type: 'bar',
         height: 'auto',
@@ -101,7 +104,7 @@ export class CoronavirusColumnComponent implements OnInit {
     this.data.forEach((element, index) => {
       if (this.data.length - index < 15) {
         this.chinaConfirmed.push(element.mainlandChina);
-        this.dates.push(element.reportDateString);
+        this.dates.push(this.datePipe.transform(element.reportDateString, 'dd/MM'));
         this.otherConfirmed.push(element.otherLocations);
       }
     });

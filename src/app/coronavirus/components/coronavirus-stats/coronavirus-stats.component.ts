@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-coronavirus-stats',
@@ -6,14 +6,10 @@ import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core
   styleUrls: ['./coronavirus-stats.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CoronavirusStatsComponent implements OnInit {
+export class CoronavirusStatsComponent {
 
   @Input() mainStats;
   @Input() data;
   @Input() selectedCountry;
-
-  ngOnInit() {
-    console.log(this.mainStats);
-  }
 
 }

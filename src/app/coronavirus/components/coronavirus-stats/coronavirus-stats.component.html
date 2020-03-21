@@ -1,51 +1,60 @@
-<h1 class="title is-spaced" id="tableDescription" *ngIf="selectedCountry">Statistiques {{selectedCountry}}</h1>
-<h1 class="title is-spaced" id="tableDescription" *ngIf="!selectedCountry">Statistiques France</h1>
-<div class="content">
-  <ng-container *ngIf="mainStats.value">
-    <p *ngIf="mainStats.value.lastUpdate">
-      Mis à jour le <strong>{{mainStats.value.lastUpdate | date: 'dd/MM/yyyy à HH:MM'}}</strong>
-    </p>
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-danger">
-          <p class="title">{{mainStats.value.cases}}
-            <span class="increase" *ngIf="selectedCountry === 'Monde'">
-              {{data[data.length - 1].deltaConfirmed  | symbolNumber}}
-            </span>
-          </p>
-          <p class="subtitle">Cas recensés</p>
-        </article>
+<ng-container *ngIf="selectedCountry">
+  <h1 class="title is-spaced" id="tableDescription" >Statistiques {{selectedCountry.Country}}</h1>
+  <div class="content">
+    <ng-container *ngIf="mainStats.value">
+      <p *ngIf="mainStats.value.lastUpdate">
+        Mis à jour le <strong>{{mainStats.value.lastUpdate | date: 'dd/MM/yyyy à HH:MM'}}</strong>
+      </p>
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-danger">
+            <p class="title">{{mainStats.value.cases}}
+              <span class="increase" *ngIf="selectedCountry.Country === 'Monde'">
+                {{data[data.length - 1].deltaConfirmed  | symbolNumber}}
+              </span>
+              <span class="increase" *ngIf="selectedCountry.Country !== 'Monde'">
+                {{mainStats.value.todayCases  | symbolNumber}}
+              </span>
+            </p>
+            <p class="subtitle">Cas recensés</p>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-dark">
+            <p class="title">
+              {{mainStats.value.deaths}}
+              <span class="increase" *ngIf="selectedCountry.Country !== 'Monde'">
+                {{mainStats.value.todayDeaths  | symbolNumber}}
+              </span>
+            </p>
+            <p class="subtitle">Morts</p>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-primary">
+            <p class="title">
+              {{mainStats.value.recovered}}
+              <span class="increase" *ngIf="selectedCountry.Country === 'Monde'">
+                {{data[data.length - 1].deltaRecovered | symbolNumber}}
+              </span>
+            </p>
+            <p class="subtitle">Guéris</p>
+          </article>
+        </div>
       </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-dark">
-          <p class="title">{{mainStats.value.deaths}}</p>
-          <p class="subtitle">Morts</p>
-        </article>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-primary">
-          <p class="title">
-            {{mainStats.value.recovered}}
-            <span class="increase" *ngIf="selectedCountry === 'Monde'">
-              {{data[data.length - 1].deltaRecovered | symbolNumber}}
-            </span>
-          </p>
-          <p class="subtitle">Guéris</p>
-        </article>
-      </div>
-    </div>
-  </ng-container>
-  <ng-container *ngIf="mainStats.loading">
-    <mat-spinner [diameter]="60" class="spinner is-spaced"></mat-spinner>
-  </ng-container>
-  <ng-container *ngIf="!mainStats.value && !mainStats.loading">
-    <article class="message is-danger">
-      <div class="message-header">
-        <p>Données indisponibles</p>
-      </div>
-      <div class="message-body">
-        Nous n'avons pas trouvé de données.
-      </div>
-    </article>
-  </ng-container>
-</div>
+    </ng-container>
+    <ng-container *ngIf="mainStats.loading">
+      <mat-spinner [diameter]="60" class="spinner is-spaced"></mat-spinner>
+    </ng-container>
+    <ng-container *ngIf="!mainStats.value && !mainStats.loading">
+      <article class="message is-danger">
+        <div class="message-header">
+          <p>Données indisponibles</p>
+        </div>
+        <div class="message-body">
+          Nous n'avons pas trouvé de données.
+        </div>
+      </article>
+    </ng-container>
+  </div>
+</ng-container>

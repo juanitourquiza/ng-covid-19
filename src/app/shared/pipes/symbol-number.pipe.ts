@@ -6,6 +6,9 @@ export class SymbolNumberPipe implements PipeTransform {
     if (value > 0) {
       return `+${value}`;
     }
+    if (value === 0) {
+      return '';
+    }
     return value.toString();
   }
 }
