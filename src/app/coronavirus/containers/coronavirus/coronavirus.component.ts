@@ -40,7 +40,6 @@ export class CoronavirusComponent implements OnInit {
   }
 
   onSelectCountry(): void {
-    console.log(this.selectedCountry);
     if (this.selectedCountry.Country === 'Monde') {
       this.mainStatsFrance$ = undefined;
       this.mainStats$ = this.coronavirusService.getMainStats();

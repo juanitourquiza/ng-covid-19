@@ -1,4 +1,14 @@
-<apx-chart [series]="chartOptions.series" [colors]="chartOptions.colors" [chart]="chartOptions.chart" [dataLabels]="chartOptions.dataLabels"
-  [plotOptions]="chartOptions.plotOptions" [yaxis]="chartOptions.yaxis" [legend]="chartOptions.legend"
-  [fill]="chartOptions.fill" [stroke]="chartOptions.stroke" [tooltip]="chartOptions.tooltip"
-  [xaxis]="chartOptions.xaxis"></apx-chart>
+<div class="chart-wrapper">
+<ngx-charts-bar-vertical-2d
+  [scheme]="colorScheme"
+  [results]="chartDatas"
+  [xAxis]="true"
+  [yAxis]="true"
+  [legend]="true"
+  [legendPosition]="'below'"
+  [legendTitle]="'Cas de coronavirus entre la Chine et le reste du monde'"
+  [barPadding]="1"
+
+  >
+</ngx-charts-bar-vertical-2d>
+</div>
