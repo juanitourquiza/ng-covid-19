@@ -2,26 +2,111 @@ import 'zone.js/dist/zone-node';
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
-import * as compression from 'compression';
-import * as cookieparser from 'cookie-parser';
 import { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
+import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
+import * as compression from 'compression';
+import * as cookieparser from 'cookie-parser';
+import { exit } from 'process';
+// for debug
+require('source-map-support').install();
+
+// for tests
+const test = process.env.TEST === 'true';
+
+// ssr DOM
+const domino = require('domino');
+const fs = require('fs');
+const path = require('path');
+// index from browser build!
+const template = fs.readFileSync(path.join('.', 'dist/ng-coronavirus/browser', 'index.html')).toString();
+// for mock global window by domino
+const win = domino.createWindow(template);
+// mock
+// tslint:disable-next-line:no-string-literal
+global['window'] = win;
+// not implemented property and functions
+Object.defineProperty(win.document.body.style, 'transform', {
+  value: () => {
+    return {
+      enumerable: true,
+      configurable: true,
+    };
+  },
+});
+// mock documnet
+// tslint:disable-next-line: no-string-literal
+global['document'] = win.document;
+// othres mock
+// tslint:disable-next-line: no-string-literal
+global['CSS'] = null;
+// global['XMLHttpRequest'] = require('xmlhttprequest').XMLHttpRequest;
+// tslint:disable-next-line:no-string-literal
+global['Prism'] = null;
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {
   const server = express();
-  server.use(compression());
-  server.use(cookieparser());
   const distFolder = join(process.cwd(), 'dist/ng-coronavirus/browser');
-  const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+  const indexHtml = existsSync(join(distFolder, 'index.original.html'))
+    ? 'index.original.html'
+    : 'index';
 
+  // redirects!
+  const redirectowww = false;
+  const redirectohttps = false;
+  const wwwredirecto = true;
+  server.use((req, res, next) => {
+    // for domain/index.html
+    if (req.url === '/index.html') {
+      res.redirect(301, 'https://' + req.hostname);
+    }
+
+    // check if it is a secure (https) request
+    // if not redirect to the equivalent https url
+    if (
+      redirectohttps &&
+      req.headers['x-forwarded-proto'] !== 'https' &&
+      req.hostname !== 'localhost'
+    ) {
+      // special for robots.txt
+      if (req.url === '/robots.txt') {
+        next();
+        return;
+      }
+      res.redirect(301, 'https://' + req.hostname + req.url);
+    }
+
+    // www or not
+    if (redirectowww && !req.hostname.startsWith('www.')) {
+      res.redirect(301, 'https://www.' + req.hostname + req.url);
+    }
+
+    // www or not
+    if (wwwredirecto && req.hostname.startsWith('www.')) {
+      const host = req.hostname.slice(4, req.hostname.length);
+      res.redirect(301, 'https://' + host + req.url);
+    }
+
+    // for test
+    if (test && req.url === '/test/exit') {
+      res.send('exit');
+      exit(0);
+      return;
+    }
+
+    next();
+  });
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
-  server.engine('html', ngExpressEngine({
-    bootstrap: AppServerModule,
-  }));
+  server.engine(
+    'html',
+    ngExpressEngine({
+      bootstrap: AppServerModule,
+    }),
+  );
 
   server.set('view engine', 'html');
   server.set('views', distFolder);
@@ -29,13 +114,41 @@ export function app() {
   // Example Express Rest API endpoints
   // app.get('/api/**', (req, res) => { });
   // Serve static files from /browser
-  server.get('*.*', express.static(distFolder, {
-    maxAge: '1y'
-  }));
+  server.get(
+    '*.*',
+    express.static(distFolder, {
+      maxAge: '1y',
+    }),
+  );
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
+    // tslint:disable-next-line:no-string-literal
+    global['navigator'] = req['headers']['user-agent'];
+    const http =
+      req.headers['x-forwarded-proto'] === undefined ? 'http' : req.headers['x-forwarded-proto'];
+
+    res.render(indexHtml, {
+      req,
+      providers: [
+        { provide: APP_BASE_HREF, useValue: req.baseUrl },
+
+        // for http and cookies
+        {
+          provide: REQUEST,
+          useValue: req,
+        },
+        {
+          provide: RESPONSE,
+          useValue: res,
+        },
+        // for absolute path
+        {
+          provide: 'ORIGIN_URL',
+          useValue: `${http}://${req.headers.host}`,
+        },
+      ],
+    });
   });
 
   return server;
@@ -46,6 +159,11 @@ function run() {
 
   // Start up the Node server
   const server = app();
+  // gzip
+  server.use(compression());
+  // cokies
+  server.use(cookieparser());
+
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
@@ -56,7 +174,7 @@ function run() {
 // The below code is to ensure that the server is run only when not requiring the bundle.
 declare const __non_webpack_require__: NodeRequire;
 const mainModule = __non_webpack_require__.main;
-const moduleFilename = mainModule && mainModule.filename || '';
+const moduleFilename = (mainModule && mainModule.filename) || '';
 if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
   run();
 }

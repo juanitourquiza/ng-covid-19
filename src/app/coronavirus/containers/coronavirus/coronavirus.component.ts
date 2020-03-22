@@ -4,6 +4,7 @@ import { Component, OnInit, ChangeDetectionStrategy, PLATFORM_ID, Inject } from 
 import { CoronavirusService } from '@coronavirus/services/coronavirus.service';
 import { DetailedStat, MainStat } from '@coronavirus/models/coronavirus.models';
 import { isPlatformBrowser } from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-coronavirus',
@@ -27,10 +28,23 @@ export class CoronavirusComponent implements OnInit {
   constructor(
     private readonly coronavirusService: CoronavirusService,
     private readonly countryPipe: CountryPipe,
-    @Inject(PLATFORM_ID) private readonly platformId: any
+    @Inject(PLATFORM_ID) private readonly platformId: any,
+    private readonly meta: Meta,
+    private readonly titleService: Title
   ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Covid-19 : Suivez en temps réel le virus du coronavirus dans le monde');
+    this.meta.addTag({
+      name: 'Covid-19',
+      content: 'Covid-19 coronavirus'
+    });
+    this.meta.updateTag(
+      {
+        name: 'description',
+        content: `Covid-19 : suivez le coronavirus en temps réel dans
+        le monde avec des statistiques dans le monde et dans les pays comme la France, Chine, Italie`
+      });
     this.data$ = this.coronavirusService.getDailyDatas();
     this.mainStatsFrance$ = this.coronavirusService.getMainStatsFromNovel('France');
     this.mainStats$ = this.coronavirusService.getMainStats();
