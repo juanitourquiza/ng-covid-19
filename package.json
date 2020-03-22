@@ -13,8 +13,7 @@
     "serve:ssr": "node dist/ng-coronavirus/server/main.js",
     "build:ssr": "ng build --prod && ng run ng-coronavirus:server:production",
     "prerender": "ng run ng-coronavirus:prerender",
-    "postinstall": "npm run build:ssr",
-    "start:heroku": "node dist/server"
+    "postinstall": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
