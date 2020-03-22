@@ -1,5 +1,5 @@
 <ng-container *ngIf="mainStats">
-  <h1 class="title is-spaced" id="tableDescription" >Statistiques {{selectedCountry.Country}}</h1>
+  <h2 class="title is-spaced" id="tableDescription" >Cas de coronavirus {{selectedCountry.Country}}</h2>
   <div class="content">
       <p *ngIf="mainStats.lastUpdate">
         Mis à jour le <strong>{{mainStats.lastUpdate | date: 'dd/MM/yyyy à HH:MM'}}</strong>

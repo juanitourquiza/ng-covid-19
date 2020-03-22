@@ -3,7 +3,7 @@
     <ng-container *ngIf="(detailedStats$ | loading | async) as detailedStats">
       <!-- Select -->
       <div class="content">
-        <label class="label" for="country-select">Sélectionner un pays</label>
+        <label class="label" for="country-select">Sélectionner un pays infecté</label>
         <div class="control">
           <div class="select is-medium">
             <select name="country" id="country-select" [(ngModel)]="selectedCountry" (ngModelChange)="onSelectCountry()"
