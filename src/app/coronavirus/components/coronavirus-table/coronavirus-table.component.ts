@@ -17,7 +17,6 @@ export class CoronavirusTableComponent implements OnInit {
   dataSource: any;
 
   ngOnInit(): void {
-    console.log(this.detailedStats);
     this.initDisplayColumns();
     this.dataSource = new MatTableDataSource(this.detailedStats);
     this.dataSource.sort = this.sort;
