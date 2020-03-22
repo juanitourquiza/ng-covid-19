@@ -41,24 +41,26 @@
       </article>
     </ng-container>
   </ng-container>
-  <h1 class="title is-spaced">L'avancée du coronavirus sur les 15 derniers jours</h1>
-  <div class="columns" *ngIf="selectedCountry.Country === 'Monde'">
-    <div class="column" >
-      <app-coronavirus-graph [data]="data"></app-coronavirus-graph>
+  <ng-container *ngIf="isBrowser">
+    <h1 class="title is-spaced">L'avancée du coronavirus sur les 15 derniers jours</h1>
+    <div class="columns" *ngIf="selectedCountry.Country === 'Monde'">
+      <div class="column" *ngIf="data">
+        <app-coronavirus-graph [data]="data"></app-coronavirus-graph>
+      </div>
+      <div class="column">
+        <app-coronavirus-column [data]="data"></app-coronavirus-column>
+      </div>
     </div>
-    <div class="column">
-      <app-coronavirus-column [data]="data"></app-coronavirus-column>
-    </div>
-  </div>
-  <div class="columns" *ngIf="selectedCountry.Country !== 'Monde'">
-    <div class="column" >
-      <ng-container *ngIf="(dataConfirmed$ | async) as dataConfirmed">
-        <ng-container *ngIf="(dataRecovered$ | async) as dataRecovered">
-          <ng-container *ngIf="(dataDeaths$ | async) as dataDeaths">
-            <app-coronavirus-graph [dataConfirmed]="dataConfirmed" [dataRecovered]="dataRecovered" [dataDeaths]="dataDeaths"></app-coronavirus-graph>
+    <div class="columns" *ngIf="selectedCountry.Country !== 'Monde'">
+      <div class="column" >
+        <ng-container *ngIf="(dataConfirmed$ | async) as dataConfirmed">
+          <ng-container *ngIf="(dataRecovered$ | async) as dataRecovered">
+            <ng-container *ngIf="(dataDeaths$ | async) as dataDeaths">
+              <app-coronavirus-graph [dataConfirmed]="dataConfirmed" [dataRecovered]="dataRecovered" [dataDeaths]="dataDeaths"></app-coronavirus-graph>
+            </ng-container>
           </ng-container>
         </ng-container>
-      </ng-container>
+      </div>
     </div>
-  </div>
+  </ng-container>
 </ng-container>

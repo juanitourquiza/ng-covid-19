@@ -10,7 +10,7 @@ import { DatePipe } from '@angular/common';
 export class CoronavirusColumnComponent implements OnInit {
 
   @Input() data;
-  chartDatas: any[] = [];
+  chartDatas: any[];
   colorScheme = {
     domain: ['#FF0000', '#00BFFF']
   };
@@ -22,6 +22,7 @@ export class CoronavirusColumnComponent implements OnInit {
   }
 
   private initDatas(): void {
+    this.chartDatas = [];
     this.data.forEach((element, index) => {
       if (this.data.length - index < 15) {
         const data = {

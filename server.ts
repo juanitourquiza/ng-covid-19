@@ -2,32 +2,19 @@ import 'zone.js/dist/zone-node';
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
+import * as compression from 'compression';
+import * as cookieparser from 'cookie-parser';
 import { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 
-const domino = require('domino');
-const fs = require('fs');
-const path = require('path');
-const templateA = fs
-  .readFileSync(path.join('dist/ng-coronavirus/browser', 'index.html'))
-  .toString();
-const win = domino.createWindow(templateA);
-// tslint:disable-next-line:no-string-literal
-// global['SVG'] = win;
-
-// tslint:disable-next-line:no-string-literal
-global['window'] = win;
-// tslint:disable-next-line:no-string-literal
-global['document'] = win.document;
-
-// tslint:disable-next-line:no-string-literal
-// global['SVG'] = SVG;
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {
   const server = express();
+  server.use(compression());
+  server.use(cookieparser());
   const distFolder = join(process.cwd(), 'dist/ng-coronavirus/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 

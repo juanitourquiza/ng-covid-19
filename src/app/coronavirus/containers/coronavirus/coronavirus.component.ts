@@ -1,8 +1,9 @@
 import { CountryPipe } from './../../../shared/pipes/country.pipe';
 import { Observable } from 'rxjs';
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, PLATFORM_ID, Inject } from '@angular/core';
 import { CoronavirusService } from '@coronavirus/services/coronavirus.service';
 import { DetailedStat, MainStat } from '@coronavirus/models/coronavirus.models';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-coronavirus',
@@ -21,10 +22,12 @@ export class CoronavirusComponent implements OnInit {
   detailedStats$: Observable<DetailedStat>;
   countries$: Observable<any>;
   selectedCountry: any = {Country: 'Monde', Slug: 'monde'};
+  isBrowser = isPlatformBrowser(this.platformId);
 
   constructor(
     private readonly coronavirusService: CoronavirusService,
-    private readonly countryPipe: CountryPipe
+    private readonly countryPipe: CountryPipe,
+    @Inject(PLATFORM_ID) private readonly platformId: any
   ) { }
 
   ngOnInit(): void {
