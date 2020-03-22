@@ -1,4 +1,11 @@
 .title {
   margin: 0;
   line-height: unset;
+  color: #00d1b2;
+  font-weight: normal;
 }
+
+.title .bold {
+  font-weight: 500;
+}
+

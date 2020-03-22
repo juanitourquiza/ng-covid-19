@@ -33,3 +33,6 @@ html, body { height: 100%; }
   margin-bottom: 2em;
 }
 
+.hero-body {
+  padding: 1.5rem !important;
+}
