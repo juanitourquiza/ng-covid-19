@@ -1,66 +1,88 @@
 <ng-container *ngIf="(data$ | async) as data">
   <ng-container *ngIf="(countries$ | loading | async) as countries">
-    <div class="content">
-      <label class="label" for="country-select">Sélectionner un pays</label>
-      <div class="control">
-        <div class="select is-medium">
-          <select name="country" id="country-select" [(ngModel)]="selectedCountry" (ngModelChange)="onSelectCountry()" [compareWith]="compareFn">
-            <option [ngValue]="{Country: 'Monde', Slug: 'monde'}" selected>Monde</option>
-            <option [ngValue]="{Country: 'France', Slug: 'france'}">France</option>
-            <option *ngFor="let country of countries.value; trackByFn" [ngValue]="country">
-              {{country.Country}}
-            </option>
-          </select>
+    <ng-container *ngIf="(detailedStats$ | loading | async) as detailedStats">
+      <!-- Select -->
+      <div class="content">
+        <label class="label" for="country-select">Sélectionner un pays</label>
+        <div class="control">
+          <div class="select is-medium">
+            <select name="country" id="country-select" [(ngModel)]="selectedCountry" (ngModelChange)="onSelectCountry()"
+              [compareWith]="compareFn">
+              <option [ngValue]="{Country: 'Monde', Slug: 'monde'}" selected>Monde</option>
+              <option [ngValue]="{Country: 'France', Slug: 'france'}">France</option>
+              <option *ngFor="let country of countries.value; trackByFn" [ngValue]="country">
+                {{country.Country}}
+              </option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-  </ng-container>
-  <ng-container *ngIf="(mainStatsFrance$ | loading | async) as mainStats">
-    <app-coronavirus-stats [mainStats]="mainStats" [data]="data" [selectedCountry]="{Country: 'France', Slug: 'france'}"></app-coronavirus-stats>
-  </ng-container>
-  <ng-container *ngIf="(mainStats$ | loading | async) as mainStats">
-    <app-coronavirus-stats [mainStats]="mainStats" [data]="data" [selectedCountry]="selectedCountry">
-    </app-coronavirus-stats>
-  </ng-container>
-  <ng-container *ngIf="(detailedStats$ | loading | async) as detailedStats">
-    <ng-container *ngIf="detailedStats.value && detailedStats.value.length > 0">
-      <app-coronavirus-table [detailedStats]="detailedStats.value" [selectedCountry]="selectedCountry">
-      </app-coronavirus-table>
-    </ng-container>
-    <ng-container *ngIf="detailedStats.loading">
-      <mat-spinner [diameter]="60" class="spinner is-spaced"></mat-spinner>
-    </ng-container>
-    <ng-container *ngIf="(detailedStats.value && detailedStats.value.length === 0) && !detailedStats.loading">
-      <article class="message is-danger is-spaced">
-        <div class="message-header">
-          <p>Données indisponibles</p>
-        </div>
-        <div class="message-body">
-          Nous n'avons pas trouvé de données.
-        </div>
-      </article>
-    </ng-container>
-  </ng-container>
-  <ng-container *ngIf="isBrowser">
-    <h1 class="title is-spaced">L'avancée du coronavirus sur les 15 derniers jours</h1>
-    <div class="columns" *ngIf="selectedCountry.Country === 'Monde'">
-      <div class="column" *ngIf="data">
-        <app-coronavirus-graph [data]="data"></app-coronavirus-graph>
-      </div>
-      <div class="column">
-        <app-coronavirus-column [data]="data"></app-coronavirus-column>
-      </div>
-    </div>
-    <div class="columns" *ngIf="selectedCountry.Country !== 'Monde'">
-      <div class="column" >
-        <ng-container *ngIf="(dataConfirmed$ | async) as dataConfirmed">
-          <ng-container *ngIf="(dataRecovered$ | async) as dataRecovered">
-            <ng-container *ngIf="(dataDeaths$ | async) as dataDeaths">
-              <app-coronavirus-graph [dataConfirmed]="dataConfirmed" [dataRecovered]="dataRecovered" [dataDeaths]="dataDeaths"></app-coronavirus-graph>
-            </ng-container>
-          </ng-container>
+
+      <!-- Stats -->
+      <ng-container *ngIf="(mainStats$ | loading | async) as mainStats">
+        <app-coronavirus-stats [mainStats]="detailedStats.value | countryfilter: 'France'" [data]="data"
+          [selectedCountry]="{Country: 'France', Slug: 'france'}"></app-coronavirus-stats>
+        <app-coronavirus-stats [mainStats]="mainStats.value" [data]="data" [selectedCountry]="selectedCountry">
+        </app-coronavirus-stats>
+        <ng-container *ngIf="mainStats.loading">
+          <mat-spinner [diameter]="60" class="spinner is-spaced"></mat-spinner>
         </ng-container>
-      </div>
-    </div>
+        <ng-container *ngIf="!mainStats.value && !mainStats.loading">
+          <article class="message is-danger">
+            <div class="message-header">
+              <p>Données indisponibles</p>
+            </div>
+            <div class="message-body">
+              Nous n'avons pas trouvé de données.
+            </div>
+          </article>
+        </ng-container>
+      </ng-container>
+
+      <!-- Table -->
+      <ng-container *ngIf="detailedStats.value && detailedStats.value.length > 0">
+        <app-coronavirus-table [detailedStats]="detailedStats.value" [selectedCountry]="selectedCountry">
+        </app-coronavirus-table>
+      </ng-container>
+      <ng-container *ngIf="detailedStats.loading">
+        <mat-spinner [diameter]="60" class="spinner is-spaced"></mat-spinner>
+      </ng-container>
+      <ng-container *ngIf="(detailedStats.value && detailedStats.value.length === 0) && !detailedStats.loading">
+        <article class="message is-danger is-spaced">
+          <div class="message-header">
+            <p>Données indisponibles</p>
+          </div>
+          <div class="message-body">
+            Nous n'avons pas trouvé de données.
+          </div>
+        </article>
+      </ng-container>
+
+      <!-- Graph -->
+      <ng-container *ngIf="isBrowser">
+        <h1 class="title is-spaced">L'avancée du coronavirus sur les 15 derniers jours</h1>
+        <div class="columns" *ngIf="selectedCountry.Country === 'Monde'">
+          <div class="column" *ngIf="data">
+            <app-coronavirus-graph [data]="data"></app-coronavirus-graph>
+          </div>
+          <div class="column">
+            <app-coronavirus-column [data]="data"></app-coronavirus-column>
+          </div>
+        </div>
+        <div class="columns" *ngIf="selectedCountry.Country !== 'Monde'">
+          <div class="column">
+            <ng-container *ngIf="(dataConfirmed$ | async) as dataConfirmed">
+              <ng-container *ngIf="(dataRecovered$ | async) as dataRecovered">
+                <ng-container *ngIf="(dataDeaths$ | async) as dataDeaths">
+                  <app-coronavirus-graph [dataConfirmed]="dataConfirmed" [dataRecovered]="dataRecovered"
+                    [dataDeaths]="dataDeaths"></app-coronavirus-graph>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+
+    </ng-container>
   </ng-container>
 </ng-container>

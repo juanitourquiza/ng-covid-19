@@ -1,5 +1,5 @@
 
-  <div class="is-spaced" [class.container-table]="detailedStats.length > 20">
+  <div *ngIf="detailedStats" class="is-spaced" [class.container-table]="detailedStats.length > 20">
     <table aria-describedby="tableDescription" mat-table matSort [dataSource]="dataSource" [matSortDisableClear]="true" matSortActive="cases" matSortDirection="desc">
 
       <!-- Country Column -->

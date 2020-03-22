@@ -1,3 +1,4 @@
+import { CountryFilterPipe } from './shared/pipes/country-filter.pipe';
 import { CountryPipe } from './shared/pipes/country.pipe';
 import { LayoutModule } from './layout/layout.module';
 import { NgModule } from '@angular/core';
@@ -16,7 +17,8 @@ import { DatePipe } from '@angular/common';
   ],
   providers: [
     DatePipe,
-    CountryPipe
+    CountryPipe,
+    CountryFilterPipe
   ],
   imports: [
     BrowserAnimationsModule,

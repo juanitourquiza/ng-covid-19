@@ -46,9 +46,8 @@ export class CoronavirusComponent implements OnInit {
         le monde avec des statistiques dans le monde et dans les pays comme la France, Chine, Italie`
       });
     this.data$ = this.coronavirusService.getDailyDatas();
-    this.mainStatsFrance$ = this.coronavirusService.getMainStatsFromNovel('France');
-    this.mainStats$ = this.coronavirusService.getMainStats();
     this.detailedStats$ = this.coronavirusService.getWorldDetailedStats();
+    this.mainStats$ = this.coronavirusService.getMainStats();
     this.countries$ = this.coronavirusService.getCountriesFromCovidApi();
   }
 

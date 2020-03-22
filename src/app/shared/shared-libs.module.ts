@@ -1,3 +1,4 @@
+import { CountryFilterPipe } from './pipes/country-filter.pipe';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -9,7 +10,8 @@ import { CountryPipe } from './pipes/country.pipe';
   declarations: [
     LoadingPipe,
     SymbolNumberPipe,
-    CountryPipe
+    CountryPipe,
+    CountryFilterPipe,
   ],
   exports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { CountryPipe } from './pipes/country.pipe';
     ReactiveFormsModule,
     LoadingPipe,
     SymbolNumberPipe,
-    CountryPipe
+    CountryPipe,
+    CountryFilterPipe
   ],
   imports: [
     CommonModule,

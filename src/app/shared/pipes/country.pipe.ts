@@ -1,6 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { isObservable, of } from 'rxjs';
-import { map, startWith, catchError } from 'rxjs/operators';
 
 @Pipe({
   name: 'country',
