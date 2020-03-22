@@ -17,7 +17,9 @@
           </div>
         </div>
       </div>
-
+      <p class="description">
+        Suivez en direct l'épidémie du <strong>Coronavirus COVID-19</strong> avec le nombre de cas recensés, le nombre de morts et de cas guéris en France et dans le monde entier à travers un dashboard et des graphiques détaillés.
+      </p>
       <!-- Stats -->
       <ng-container *ngIf="(mainStats$ | loading | async) as mainStats">
         <app-coronavirus-stats [mainStats]="detailedStats.value | countryfilter: 'France'" [data]="data"
