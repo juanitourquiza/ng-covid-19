@@ -1,5 +1,5 @@
 <ng-container *ngIf="(data$ | async) as data">
-  <ng-container *ngIf="(countries$ | loading | async) as countries">
+  <ng-container *ngIf="countries">
     <ng-container *ngIf="(detailedStats$ | loading | async) as detailedStats">
       <!-- Select -->
       <div class="content">
@@ -10,7 +10,7 @@
               [compareWith]="compareFn">
               <option [ngValue]="{Country: 'Monde', Slug: 'monde'}" selected>Monde</option>
               <option [ngValue]="{Country: 'France', Slug: 'france'}">France</option>
-              <option *ngFor="let country of countries.value; trackByFn" [ngValue]="country">
+              <option *ngFor="let country of countries; trackByFn" [ngValue]="country">
                 {{country.Country}}
               </option>
             </select>

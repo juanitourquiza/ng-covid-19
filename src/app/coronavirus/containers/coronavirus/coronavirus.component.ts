@@ -1,10 +1,11 @@
-import { CountryPipe } from './../../../shared/pipes/country.pipe';
 import { Observable } from 'rxjs';
 import { Component, OnInit, ChangeDetectionStrategy, PLATFORM_ID, Inject } from '@angular/core';
 import { CoronavirusService } from '@coronavirus/services/coronavirus.service';
 import { DetailedStat, MainStat } from '@coronavirus/models/coronavirus.models';
 import { isPlatformBrowser } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
+import { COUNTRIES } from '@coronavirus/constants/countries.constants';
+import { CountryPipe } from '@shared/pipes/country.pipe';
 
 @Component({
   selector: 'app-coronavirus',
@@ -21,7 +22,7 @@ export class CoronavirusComponent implements OnInit {
   mainStats$: Observable<MainStat>;
   mainStatsFrance$: Observable<MainStat>;
   detailedStats$: Observable<DetailedStat>;
-  countries$: Observable<any>;
+  countries: any[];
   selectedCountry: any = {Country: 'Monde', Slug: 'monde'};
   isBrowser = isPlatformBrowser(this.platformId);
 
@@ -48,7 +49,7 @@ export class CoronavirusComponent implements OnInit {
     this.data$ = this.coronavirusService.getDailyDatas();
     this.detailedStats$ = this.coronavirusService.getWorldDetailedStats();
     this.mainStats$ = this.coronavirusService.getMainStats();
-    this.countries$ = this.coronavirusService.getCountriesFromCovidApi();
+    this.countries = COUNTRIES;
   }
 
   trackByFn(index): void {
