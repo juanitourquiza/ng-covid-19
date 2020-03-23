@@ -36,6 +36,7 @@
     "express": "^4.15.2",
     "papaparse": "^5.1.1",
     "rxjs": "~6.5.4",
+    "sitemap-generator": "^8.4.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

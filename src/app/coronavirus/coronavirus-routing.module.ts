@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CoronavirusComponent } from './containers/coronavirus/coronavirus.component';
+import { CoronavirusLinksComponent } from './containers/coronavirus-links/coronavirus-links.component';
 
 export const coronavirusRoutes: Routes = [
   {
@@ -9,7 +10,11 @@ export const coronavirusRoutes: Routes = [
   },
   {
     component: CoronavirusComponent,
-    path: ':country',
+    path: 'pays/:country',
+  },
+  {
+    component: CoronavirusLinksComponent,
+    path: 'pays',
   }
 ];
 

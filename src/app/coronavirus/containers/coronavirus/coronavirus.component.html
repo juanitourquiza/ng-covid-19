@@ -9,15 +9,12 @@
             <select name="country" id="country-select" [(ngModel)]="selectedCountry" (ngModelChange)="onSelectCountry()"
               [compareWith]="compareFn">
               <option *ngFor="let country of countries; trackByFn" [ngValue]="country">
-
-                <a [routerLink]="selectedCountry.Slug" title="coronavirus selectedCountry.Slug">
-                  <ng-container *ngIf="country.Translation">
-                    {{country.Translation}}
-                  </ng-container>
-                  <ng-container *ngIf="!country.Translation">
-                    {{country.Country}}
-                  </ng-container>
-                </a>
+                <ng-container *ngIf="country.Translation">
+                  {{country.Translation}}
+                </ng-container>
+                <ng-container *ngIf="!country.Translation">
+                  {{country.Country}}
+                </ng-container>
               </option>
             </select>
           </div>

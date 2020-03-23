@@ -82,7 +82,7 @@ export class CoronavirusComponent implements OnInit {
   }
 
   onSelectCountry(): void {
-    this.router.navigate(['', this.selectedCountry.Slug]);
+    this.router.navigate(['pays', this.selectedCountry.Slug]);
   }
 
   compareFn(optionOne, optionTwo): boolean {
