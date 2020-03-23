@@ -28,3 +28,8 @@ td.mat-cell:first-of-type {
 .rate {
   font-size: 0.8em;
 }
+
+img.pequena {
+  width: 20px;
+  height: 10px;
+}
