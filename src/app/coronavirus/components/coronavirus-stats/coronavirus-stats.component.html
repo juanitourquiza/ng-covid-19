@@ -8,7 +8,7 @@
     <div class="tile is-ancestor">
       <div class="tile is-parent">
         <article class="tile is-child notification is-danger">
-          <p class="title">{{mainStats.value.confirmed.value}}
+          <p class="title">{{mainStats.value.confirmed.value | number}}
             <span class="increase" *ngIf="selectedCountry === 'Monde'">
               {{data[data.length - 1].deltaConfirmed  | symbolNumber}}
             </span>
@@ -18,14 +18,14 @@
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-dark">
-          <p class="title">{{mainStats.value.deaths.value}}</p>
+          <p class="title">{{mainStats.value.deaths.value | number}}</p>
           <p class="subtitle">Muertos</p>
         </article>
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-primary">
           <p class="title">
-            {{mainStats.value.recovered.value}}
+            {{mainStats.value.recovered.value | number}}
             <span class="increase" *ngIf="selectedCountry === 'Monde'">
               {{data[data.length - 1].deltaRecovered | symbolNumber}}
             </span>
