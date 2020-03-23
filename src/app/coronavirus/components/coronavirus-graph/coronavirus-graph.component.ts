@@ -64,7 +64,7 @@ export class CoronavirusGraphComponent implements OnInit {
       ],
       chart: {
         height: "auto",
-        type: "line",
+        type: "area",
         toolbar: {
           show: false
         }
