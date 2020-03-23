@@ -93,7 +93,7 @@ export class CoronavirusColumnComponent implements OnInit {
       },
       yaxis: {
         title: {
-          text: "Nombre de cas"
+          text: "Número de casos"
         }
       },
       fill: {

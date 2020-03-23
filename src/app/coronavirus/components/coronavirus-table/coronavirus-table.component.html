@@ -6,14 +6,15 @@
     <ng-container matColumnDef="country">
       <th id="country" mat-header-cell *matHeaderCellDef mat-sort-header>País</th>
       <td mat-cell *matCellDef="let element">
+
         {{element.country}}
       </td>
     </ng-container>
 
     <!-- Confirmed Column -->
     <ng-container matColumnDef="cases">
-      <th id="cases" mat-header-cell *matHeaderCellDef mat-sort-header>Identificado</th>
-      <td mat-cell *matCellDef="let element" class="has-text-danger">{{element.cases}}</td>
+      <th id="cases" mat-header-cell *matHeaderCellDef mat-sort-header>Identificados</th>
+      <td mat-cell *matCellDef="let element" class="has-text-danger">{{element.cases | number}}</td>
     </ng-container>
 
     <!-- Today Column -->
@@ -24,9 +25,9 @@
 
     <!-- Deaths Column -->
     <ng-container matColumnDef="deaths">
-      <th id="deaths" mat-header-cell *matHeaderCellDef mat-sort-header>Muerto</th>
+      <th id="deaths" mat-header-cell *matHeaderCellDef mat-sort-header>Muertos</th>
       <td mat-cell *matCellDef="let element" class="has-text-black">
-        {{element.deaths}}
+        {{element.deaths| number}}
         <span class="rate">({{element.deathRate}} %)</span>
       </td>
     </ng-container>
@@ -43,7 +44,7 @@
     <ng-container matColumnDef="recovered">
       <th id="recovered" mat-header-cell *matHeaderCellDef mat-sort-header>Recuperados</th>
       <td mat-cell *matCellDef="let element" class="has-text-primary">
-        {{element.recovered}}
+        {{element.recovered| number}}
         <span class="rate">({{element.recoveredRate}} %)</span>
       </td>
     </ng-container>
