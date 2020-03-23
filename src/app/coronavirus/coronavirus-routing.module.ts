@@ -10,11 +10,11 @@ export const coronavirusRoutes: Routes = [
   },
   {
     component: CoronavirusComponent,
-    path: 'pays/:country',
+    path: 'stats/:country',
   },
   {
     component: CoronavirusLinksComponent,
-    path: 'pays',
+    path: 'stats',
   }
 ];
 

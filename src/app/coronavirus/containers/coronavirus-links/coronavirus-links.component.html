@@ -2,7 +2,7 @@
   <h1 class="title">Les cas de Coronavirus COVID-19 par pays</h1>
   <ul>
     <li *ngFor="let country of countries">
-      <a href [routerLink]="['/pays', country.Slug]" title="Cas de Coronavirus COVID-19 : {{country.Country}}">
+      <a href [routerLink]="['/stats', country.Slug]" title="Cas de Coronavirus COVID-19 : {{country.Country}}">
         Cas de Coronavirus COVID-19 : {{country.Slug}}
       </a>
     </li>
