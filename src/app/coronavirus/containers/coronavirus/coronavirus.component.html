@@ -8,17 +8,34 @@
           <div class="select is-medium">
             <select name="country" id="country-select" [(ngModel)]="selectedCountry" (ngModelChange)="onSelectCountry()"
               [compareWith]="compareFn">
-              <option [ngValue]="{Country: 'Monde', Slug: 'monde'}" selected>Monde</option>
-              <option [ngValue]="{Country: 'France', Slug: 'france'}">France</option>
               <option *ngFor="let country of countries; trackByFn" [ngValue]="country">
-                {{country.Country}}
+                <ng-container *ngIf="country.Translation">
+                  {{country.Translation}}
+                </ng-container>
+                <ng-container *ngIf="!country.Translation">
+                  {{country.Country}}
+                </ng-container>
               </option>
             </select>
           </div>
         </div>
       </div>
-      <p class="description">
-        Suivez en direct l'épidémie du <strong>Coronavirus COVID-19</strong> avec le nombre de cas recensés, le nombre de morts et de cas guéris en France et dans le monde entier à travers un dashboard et des graphiques détaillés.
+      <p class="description" *ngIf="selectedCountry.Country === 'Monde'">
+        Suivez en direct l'épidémie du <strong>Coronavirus COVID-19</strong> avec le nombre de cas recensés, le nombre
+        de morts et de cas guéris en <strong>France</strong> et dans le monde entier: <strong>Italie, Espagne,
+          Chine</strong> à travers un dashboard et des graphiques détaillés.
+      </p>
+      <p class="description" *ngIf="selectedCountry.Country !== 'Monde'">
+        Suivez en direct l'épidémie du <strong>Coronavirus COVID-19</strong> avec le nombre de cas recensés, le nombre
+        de morts et de cas guéris en <strong>
+          <ng-container *ngIf="selectedCountry.Translation">
+            {{selectedCountry.Translation}}
+          </ng-container>
+          <ng-container *ngIf="!selectedCountry.Translation">
+            {{selectedCountry.Country}}
+          </ng-container>
+        </strong>
+        à travers un dashboard et des graphiques détaillés.
       </p>
       <!-- Stats -->
       <ng-container *ngIf="(mainStats$ | loading | async) as mainStats">

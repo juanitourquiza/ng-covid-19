@@ -44,16 +44,30 @@ export class CoronavirusGraphComponent implements OnInit {
   private initDatasWorld(): void {
     this.data.forEach((element, index) => {
       if (this.data.length - index < 15) {
-        const caseItem = {
-          name: this.datePipe.transform(element.reportDateString, 'dd/MM'),
-          value: element.totalConfirmed
-        };
-        const recoveredItem = {
-          name: this.datePipe.transform(element.reportDateString, 'dd/MM'),
-          value: element.totalRecovered
-        };
-        this.totalConfirmed.push(caseItem);
-        this.totalRecovered.push(recoveredItem);
+        if (element.confirmed && element.confirmed.total) {
+          const caseItem = {
+            name: this.datePipe.transform(element.reportDate, 'dd/MM'),
+            value: element.confirmed.total
+          };
+          this.totalConfirmed.push(caseItem);
+        }
+
+        if (element.recovered && element.recovered.total) {
+          const recoveredItem = {
+            name: this.datePipe.transform(element.reportDate, 'dd/MM'),
+            value: element.recovered.total
+          };
+          this.totalRecovered.push(recoveredItem);
+        }
+        if (element.deaths && element.deaths.total) {
+          const deathItem = {
+            name: this.datePipe.transform(element.reportDate, 'dd/MM'),
+            value: element.deaths.total
+          };
+
+          this.totalDeaths.push(deathItem);
+        }
+
       }
     });
   }

@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingPipe } from './pipes/loading.pipe';
 import { SymbolNumberPipe } from './pipes/symbol-number.pipe';
 import { CountryPipe } from './pipes/country.pipe';
+import { OperationPipe } from './pipes/operation.pipe';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { CountryPipe } from './pipes/country.pipe';
     SymbolNumberPipe,
     CountryPipe,
     CountryFilterPipe,
+    OperationPipe
   ],
   exports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { CountryPipe } from './pipes/country.pipe';
     LoadingPipe,
     SymbolNumberPipe,
     CountryPipe,
-    CountryFilterPipe
+    CountryFilterPipe,
+    OperationPipe
   ],
   imports: [
     CommonModule,

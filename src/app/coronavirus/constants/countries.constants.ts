@@ -1,5 +1,75 @@
 export const COUNTRIES = [
   {
+    Country: 'Monde',
+    Slug: 'monde',
+    Provinces: [
+      ''
+    ]
+  },
+  {
+    Country: 'France',
+    Slug: 'france',
+    Provinces: [
+      ''
+    ]
+  },
+  {
+    Country: 'Italy',
+    Slug: 'italy',
+    Translation: 'Italie',
+    Provinces: [
+      ''
+    ]
+  },
+  {
+    Country: 'China',
+    Slug: 'china',
+    Translation: 'Chine',
+    Provinces: [
+      'Hubei',
+      'Guangdong',
+      'Henan',
+      'Zhejiang',
+      'Hunan',
+      'Anhui',
+      'Jiangxi',
+      'Shandong',
+      'Jiangsu',
+      'Chongqing',
+      'Sichuan',
+      'Heilongjiang',
+      'Beijing',
+      'Shanghai',
+      'Hebei',
+      'Fujian',
+      'Guangxi',
+      'Shaanxi',
+      'Yunnan',
+      'Hainan',
+      'Guizhou',
+      'Tianjin',
+      'Shanxi',
+      'Gansu',
+      'Hong Kong',
+      'Liaoning',
+      'Jilin',
+      'Xinjiang',
+      'Inner Mongolia',
+      'Ningxia',
+      'Qinghai',
+      'Macau',
+      'Tibet'
+    ]
+  },
+  {
+    Country: 'Spain',
+    Slug: 'spain',
+    Translation: 'Espagne',
+    Provinces: [
+      ''
+    ]
+  },
+  {
     Country: 'Afghanistan',
     Slug: 'afghanistan',
     Provinces: [
@@ -254,45 +324,6 @@ export const COUNTRIES = [
     Slug: 'chile',
     Provinces: [
       ''
-    ]
-  },
-  {
-    Country: 'China',
-    Slug: 'china',
-    Provinces: [
-      'Hubei',
-      'Guangdong',
-      'Henan',
-      'Zhejiang',
-      'Hunan',
-      'Anhui',
-      'Jiangxi',
-      'Shandong',
-      'Jiangsu',
-      'Chongqing',
-      'Sichuan',
-      'Heilongjiang',
-      'Beijing',
-      'Shanghai',
-      'Hebei',
-      'Fujian',
-      'Guangxi',
-      'Shaanxi',
-      'Yunnan',
-      'Hainan',
-      'Guizhou',
-      'Tianjin',
-      'Shanxi',
-      'Gansu',
-      'Hong Kong',
-      'Liaoning',
-      'Jilin',
-      'Xinjiang',
-      'Inner Mongolia',
-      'Ningxia',
-      'Qinghai',
-      'Macau',
-      'Tibet'
     ]
   },
   {
@@ -651,13 +682,6 @@ export const COUNTRIES = [
   {
     Country: 'Israel',
     Slug: 'israel',
-    Provinces: [
-      ''
-    ]
-  },
-  {
-    Country: 'Italy',
-    Slug: 'italy',
     Provinces: [
       ''
     ]
@@ -1137,13 +1161,6 @@ export const COUNTRIES = [
   {
     Country: 'South Africa',
     Slug: 'south-africa',
-    Provinces: [
-      ''
-    ]
-  },
-  {
-    Country: 'Spain',
-    Slug: 'spain',
     Provinces: [
       ''
     ]

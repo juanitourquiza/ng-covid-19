@@ -6,6 +6,11 @@ export const routes: Routes = [
     loadChildren: () => import('./coronavirus/coronavirus.module')
       .then(m => m.CoronavirusModule),
     path: ''
+  },
+  {
+    loadChildren: () => import('./info/info.module')
+      .then(m => m.InfoModule),
+    path: 'infos'
   }
 ];
 

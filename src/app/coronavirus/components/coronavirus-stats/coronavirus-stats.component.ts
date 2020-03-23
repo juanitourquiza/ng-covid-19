@@ -11,5 +11,4 @@ export class CoronavirusStatsComponent {
   @Input() mainStats;
   @Input() data;
   @Input() selectedCountry;
-
 }

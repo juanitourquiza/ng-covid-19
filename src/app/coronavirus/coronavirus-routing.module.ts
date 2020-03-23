@@ -6,6 +6,10 @@ export const coronavirusRoutes: Routes = [
   {
     component: CoronavirusComponent,
     path: '',
+  },
+  {
+    component: CoronavirusComponent,
+    path: ':country',
   }
 ];
 

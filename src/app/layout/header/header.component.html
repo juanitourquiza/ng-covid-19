@@ -13,12 +13,30 @@
   <div id="menu" class="navbar-menu" [class.is-active]="isActive">
     <div class="navbar-end">
       <div class="navbar-item">
-        <a class="navbar-item" href="https://www.gouvernement.fr/info-coronavirus" target="_blank" rel="noopener noreferrer">
-          Informations
+        <a class="navbar-item" routerLink="/">
+          Statistiques
         </a>
-        <a class="navbar-item" href="https://www.maladiecoronavirus.fr/" target="_blank" rel="noopener noreferrer">
-          <strong>Avez-vous les symptômes du coronavirus ?</strong>
-        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Informations
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" routerLink="/infos/maladie-coronavirus">
+              Coronavirus COVID-19
+            </a>
+            <a class="navbar-item" routerLink="/infos/conseils">
+              Conseils pour se protéger
+            </a>
+            <a class="navbar-item" routerLink="/infos/gouvernement">
+              Gouvernement
+            </a>
+            <a class="navbar-item" routerLink="/infos/maladie-test-coronavirus">
+              <strong>Avez-vous les symptômes du coronavirus ?</strong>
+            </a>
+          </div>
+        </div>
+
+
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             Télécharger les attestations

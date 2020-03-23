@@ -26,15 +26,15 @@ export class CoronavirusColumnComponent implements OnInit {
     this.data.forEach((element, index) => {
       if (this.data.length - index < 15) {
         const data = {
-          name: this.datePipe.transform(element.reportDateString, 'dd/MM'),
+          name: this.datePipe.transform(element.reportDate, 'dd/MM'),
           series: [
             {
               name: 'Chine',
-              value: element.mainlandChina
+              value: element.confirmed.china
             },
             {
               name: 'Reste du monde',
-              value: element.otherLocations
+              value: element.confirmed.outsideChina
             }
           ]
         };

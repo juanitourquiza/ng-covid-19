@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+import { OperationPipe } from '@shared/pipes/operation.pipe';
 
 @NgModule({
   bootstrap: [
@@ -18,7 +19,8 @@ import { DatePipe } from '@angular/common';
   providers: [
     DatePipe,
     CountryPipe,
-    CountryFilterPipe
+    CountryFilterPipe,
+    OperationPipe
   ],
   imports: [
     BrowserAnimationsModule,
