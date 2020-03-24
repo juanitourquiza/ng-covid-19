@@ -27,7 +27,7 @@ export class CoronavirusService {
 
   getCountriesFromCovidApi(): Observable<any> {
     return this.httpClient.get(`${this.urlCovidApi}/countries`).pipe(
-      filter((countryItem: any) => countryItem.Country !== 'France'));
+      filter((countryItem: any) => countryItem.country !== 'France'));
   }
 
   getMainStats(): Observable<MainStat> {

@@ -5,7 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 @Component({
   selector: 'app-coronavirus-table',
   templateUrl: './coronavirus-table.component.html',
-  styleUrls: ['./coronavirus-table.component.css'],
+  styleUrls: ['./coronavirus-table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoronavirusTableComponent implements OnInit {
@@ -23,9 +23,9 @@ export class CoronavirusTableComponent implements OnInit {
   }
 
   private initDisplayColumns(): void {
-    if (this.selectedCountry.Country === 'Monde') {
+    if (this.selectedCountry.country === 'Monde') {
       this.displayedColumns = ['country', 'cases', 'todayCases', 'deaths', 'todayDeaths', 'recovered'];
-    } else if (this.selectedCountry.Country === 'France') {
+    } else if (this.selectedCountry.country === 'France') {
       this.displayedColumns = ['country', 'cases', 'todayCases'];
     } else {
       this.displayedColumns = ['country', 'cases', 'deaths', 'recovered'];

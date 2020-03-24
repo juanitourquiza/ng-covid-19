@@ -2,7 +2,7 @@ import { CountryFilterPipe } from './shared/pipes/country-filter.pipe';
 import { CountryPipe } from './shared/pipes/country.pipe';
 import { LayoutModule } from './layout/layout.module';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';

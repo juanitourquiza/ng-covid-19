@@ -3,7 +3,7 @@ import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-coronavirus-graph',
   templateUrl: './coronavirus-graph.component.html',
-  styleUrls: ['./coronavirus-graph.component.css'],
+  styleUrls: ['./coronavirus-graph.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoronavirusGraphComponent implements OnInit {
@@ -18,7 +18,7 @@ export class CoronavirusGraphComponent implements OnInit {
   dates: string[] = [];
   chartDatas: any[];
   colorScheme = {
-    domain: ['#f14668', '#00d1b2', '#363636']
+    domain: ['#FF8811', '#E83D49', '#48c774']
   };
   constructor(private readonly datePipe: DatePipe) { }
 
@@ -30,12 +30,12 @@ export class CoronavirusGraphComponent implements OnInit {
         series: this.totalConfirmed
       },
       {
-        name: 'Guéris',
-        series: this.totalRecovered
-      },
-      {
         name: 'Morts',
         series: this.totalDeaths
+      },
+      {
+        name: 'Guéris',
+        series: this.totalRecovered
       }
     ];
 

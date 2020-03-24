@@ -1,0 +1,25 @@
+.increase {
+  font-size: 0.6em;
+  font-weight: normal;
+}
+
+.is-warning {
+  &:hover {
+    background-color: orange;
+    cursor: pointer;
+  }
+}
+
+.is-danger {
+  &:hover {
+    background-color: red;
+    cursor: pointer;
+  }
+}
+
+.is-success {
+  &:hover {
+    background-color: green;
+    cursor: pointer;
+  }
+}

@@ -29,11 +29,9 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css",
-              "./node_modules/bulma/css/bulma.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -101,11 +99,9 @@
               "src/images/meta_og.png"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           }
         },
         "lint": {
@@ -183,5 +179,10 @@
       }
     }
   },
-  "defaultProject": "ng-coronavirus"
+  "defaultProject": "ng-coronavirus",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

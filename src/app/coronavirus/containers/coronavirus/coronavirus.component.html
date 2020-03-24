@@ -3,45 +3,44 @@
     <ng-container *ngIf="(detailedStats$ | loading | async) as detailedStats">
       <!-- Select -->
       <div class="content">
-        <label class="label" for="country-select">Sélectionner un pays infecté</label>
-        <div class="control">
-          <div class="select is-medium">
-            <select name="country" id="country-select" [(ngModel)]="selectedCountry" (ngModelChange)="onSelectCountry()"
-              [compareWith]="compareFn">
-              <option *ngFor="let country of countries; trackByFn" [ngValue]="country">
-                <ng-container *ngIf="country.Translation">
-                  {{country.Translation}}
-                </ng-container>
-                <ng-container *ngIf="!country.Translation">
-                  {{country.Country}}
-                </ng-container>
-              </option>
-            </select>
-          </div>
-        </div>
+        <mat-label class="label" for="country-select">Sélectionner un pays infecté</mat-label>
+        <mat-select [(ngModel)]="selectedCountry" (ngModelChange)="onSelectCountry()" [compareWith]="compareFn"
+          disableRipple>
+           <mat-select-trigger>
+            <img *ngIf="!selectedCountry.code" width="32" height="32" src="../../../../assets/images/flag_world.png">
+            <img *ngIf="selectedCountry.code" src="https://www.countryflags.io/{{selectedCountry.code}}/flat/32.png" />
+            {{selectedCountry.translation}}
+           </mat-select-trigger>
+          <mat-option *ngFor="let country of countries; trackByFn" [value]="country" @.disabled>
+            <img *ngIf="!country.code" width="32" height="32" src="../../../../assets/images/flag_world.png">
+            <img *ngIf="country.code" src="https://www.countryflags.io/{{country.code}}/flat/32.png" />
+            {{country.translation}}
+          </mat-option>
+        </mat-select>
       </div>
-      <p class="description" *ngIf="selectedCountry.Country === 'Monde'">
+      <p class="description" *ngIf="selectedCountry.country === 'Monde'">
         Suivez en direct l'épidémie du <strong>Coronavirus COVID-19</strong> avec le nombre de cas recensés, le nombre
         de morts et de cas guéris en <strong>France</strong> et dans le monde entier: <strong>Italie, Espagne,
           Chine</strong> à travers un dashboard et des graphiques détaillés.
       </p>
-      <p class="description" *ngIf="selectedCountry.Country !== 'Monde'">
+      <p class="description" *ngIf="selectedCountry.country !== 'Monde'">
         Suivez en direct l'épidémie du <strong>Coronavirus COVID-19</strong> avec le nombre de cas recensés, le nombre
         de morts et de cas guéris en <strong>
-          <ng-container *ngIf="selectedCountry.Translation">
-            {{selectedCountry.Translation}}
+          <ng-container *ngIf="selectedCountry.translation">
+            {{selectedCountry.translation}}
           </ng-container>
-          <ng-container *ngIf="!selectedCountry.Translation">
-            {{selectedCountry.Country}}
+          <ng-container *ngIf="!selectedCountry.translation">
+            {{selectedCountry.country}}
           </ng-container>
         </strong>
         à travers un dashboard et des graphiques détaillés.
       </p>
       <!-- Stats -->
       <ng-container *ngIf="(mainStats$ | loading | async) as mainStats">
-        <app-coronavirus-stats [mainStats]="detailedStats.value | countryfilter: 'France'" [data]="data"
-          [selectedCountry]="{Country: 'France', Slug: 'france'}"></app-coronavirus-stats>
-        <app-coronavirus-stats [mainStats]="mainStats.value" [data]="data" [selectedCountry]="selectedCountry">
+        <!-- <app-coronavirus-stats [mainStats]="detailedStats.value | countryfilter: 'France'" [data]="data"
+          [selectedCountry]="{country: 'France', slug: 'france', translation: 'France'}"></app-coronavirus-stats> -->
+        <app-coronavirus-stats [mainStats]="mainStats.value" [data]="data" [selectedCountry]="selectedCountry"
+          (updateMapEvent)="onUpdateMapEvent($event)">
         </app-coronavirus-stats>
         <ng-container *ngIf="mainStats.loading">
           <mat-spinner [diameter]="60" class="spinner is-spaced"></mat-spinner>
@@ -58,11 +57,20 @@
         </ng-container>
       </ng-container>
 
-      <!-- Table -->
+      <!-- Map -->
       <ng-container *ngIf="detailedStats.value && detailedStats.value.length > 0">
-        <app-coronavirus-table [detailedStats]="detailedStats.value" [selectedCountry]="selectedCountry">
-        </app-coronavirus-table>
+        <div class="columns">
+          <div class="column is-two-thirds" *ngIf="this.selectedCountry.country === 'Monde'">
+            <app-coronavirus-map [detailedStats]="detailedStats.value" [selectedTypeMap]="selectedTypeMap">
+            </app-coronavirus-map>
+          </div>
+          <div class="column">
+            <app-coronavirus-table [detailedStats]="detailedStats.value" [selectedCountry]="selectedCountry">
+            </app-coronavirus-table>
+          </div>
+        </div>
       </ng-container>
+
       <ng-container *ngIf="detailedStats.loading">
         <mat-spinner [diameter]="60" class="spinner is-spaced"></mat-spinner>
       </ng-container>
@@ -80,7 +88,7 @@
       <!-- Graph -->
       <ng-container *ngIf="isBrowser">
         <h1 class="title is-spaced">L'avancée du coronavirus sur les 15 derniers jours</h1>
-        <div class="columns" *ngIf="selectedCountry.Country === 'Monde'">
+        <div class="columns" *ngIf="selectedCountry.country === 'Monde'">
           <div class="column" *ngIf="data">
             <app-coronavirus-graph [data]="data"></app-coronavirus-graph>
           </div>
@@ -88,7 +96,7 @@
             <app-coronavirus-column [data]="data"></app-coronavirus-column>
           </div>
         </div>
-        <div class="columns" *ngIf="selectedCountry.Country !== 'Monde'">
+        <div class="columns" *ngIf="selectedCountry.country !== 'Monde'">
           <div class="column">
             <ng-container *ngIf="(dataConfirmed$ | async) as dataConfirmed">
               <ng-container *ngIf="(dataRecovered$ | async) as dataRecovered">

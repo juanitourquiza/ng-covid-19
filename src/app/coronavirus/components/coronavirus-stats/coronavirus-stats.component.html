@@ -1,38 +1,32 @@
 <ng-container *ngIf="mainStats">
-  <h2 class="title is-spaced" id="tableDescription" >Statistiques et cas Coronavirus COVID-19
-    <ng-container *ngIf="selectedCountry.Translation">
-      {{selectedCountry.Translation}}
-    </ng-container>
-    <ng-container *ngIf="!selectedCountry.Translation">
-      {{selectedCountry.Country}}
-    </ng-container>
+  <h2 class="title is-spaced" id="tableDescription" >Statistiques et cas Coronavirus COVID-19 {{selectedCountry.translation}}
   </h2>
   <div class="content">
       <p *ngIf="mainStats.lastUpdate">
         Mis à jour le <strong>{{mainStats.lastUpdate | date: 'dd/MM/yyyy à HH:MM'}}</strong>
       </p>
       <div class="tile is-ancestor">
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-danger">
+        <div class="tile is-parent" (click)="updateMap('cases')">
+          <article class="tile is-child notification is-warning">
             <p class="title">{{mainStats.cases}}
-              <span class="increase" *ngIf="selectedCountry.Country === 'Monde'">
+              <span class="increase" *ngIf="selectedCountry.country === 'Monde'">
                 {{mainStats.cases | operation : data[data.length - 1].confirmed.total : '-'  | symbolNumber}}
               </span>
-              <span class="increase" *ngIf="selectedCountry.Country !== 'Monde'">
+              <span class="increase" *ngIf="selectedCountry.country !== 'Monde'">
                 {{mainStats.todayCases  | symbolNumber}}
               </span>
             </p>
-            <p class="subtitle">Cas recensés</p>
+            <p class="subtitle">Confirmés</p>
           </article>
         </div>
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-dark">
+        <div class="tile is-parent" (click)="updateMap('deaths')">
+          <article class="tile is-child notification is-danger">
             <p class="title">
               {{mainStats.deaths}}
-              <span class="increase" *ngIf="selectedCountry.Country === 'Monde'">
+              <span class="increase" *ngIf="selectedCountry.country === 'Monde'">
                 {{mainStats.deaths | operation : data[data.length - 1].deaths.total : '-'  | symbolNumber}}
               </span>
-              <span class="increase" *ngIf="selectedCountry.Country !== 'Monde'">
+              <span class="increase" *ngIf="selectedCountry.country !== 'Monde'">
                 {{mainStats.todayDeaths  | symbolNumber}}
               </span>
             </p>
@@ -40,10 +34,10 @@
           </article>
         </div>
         <div class="tile is-parent">
-          <article class="tile is-child notification is-primary">
+          <article class="tile is-child notification is-success" (click)="updateMap('recovered')">
             <p class="title">
               {{mainStats.recovered}}
-              <!-- <span class="increase" *ngIf="selectedCountry.Country === 'Monde'">
+              <!-- <span class="increase" *ngIf="selectedCountry.country === 'Monde'">
                 {{mainStats.recovered | operation : data[data.length - 1].recovered.total : '-'  | symbolNumber}}
               </span> -->
             </p>

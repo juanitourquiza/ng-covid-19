@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Component, OnInit, ChangeDetectionStrategy, PLATFORM_ID, Inject } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, PLATFORM_ID, Inject, ChangeDetectorRef } from '@angular/core';
 import { CoronavirusService } from '@coronavirus/services/coronavirus.service';
 import { DetailedStat, MainStat } from '@coronavirus/models/coronavirus.models';
 import { isPlatformBrowser } from '@angular/common';
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-coronavirus',
   templateUrl: './coronavirus.component.html',
-  styleUrls: ['./coronavirus.component.css'],
+  styleUrls: ['./coronavirus.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoronavirusComponent implements OnInit {
@@ -23,14 +23,15 @@ export class CoronavirusComponent implements OnInit {
   mainStatsFrance$: Observable<MainStat>;
   detailedStats$: Observable<DetailedStat>;
   countries: any[] = COUNTRIES;
-  selectedCountry: any = { Country: 'Monde', Slug: 'monde' };
+  selectedCountry: any = { country: 'Monde', slug: 'monde', translation: 'Monde' };
+  selectedTypeMap = 'cases';
   isBrowser = isPlatformBrowser(this.platformId);
 
   constructor(
     private readonly coronavirusService: CoronavirusService,
     private readonly countryPipe: CountryPipe,
     private readonly router: Router,
-    private route: ActivatedRoute,
+    private readonly route: ActivatedRoute,
     @Inject(PLATFORM_ID) private readonly platformId: any
   ) { }
 
@@ -38,10 +39,10 @@ export class CoronavirusComponent implements OnInit {
     this.data$ = this.coronavirusService.getDailyDatas();
     this.route.params.subscribe(params => {
       if (params.country) {
-        this.selectedCountry = this.countries.find((country) => country.Slug === params.country);
-        if (params.country === 'monde') {
+        this.selectedCountry = this.countries.find((country) => country.slug === params.country);
+        if (this.selectedCountry.country === 'Monde') {
           this.initWorldDatas();
-        } else if (params.country === 'france') {
+        } else if (this.selectedCountry.country === 'France') {
           this.initFranceDatas();
         } else {
           this.initCountryDatas();
@@ -51,6 +52,10 @@ export class CoronavirusComponent implements OnInit {
         this.mainStats$ = this.coronavirusService.getMainStats();
       }
     });
+  }
+
+  onUpdateMapEvent($event: string) {
+    this.selectedTypeMap = $event;
   }
 
   private initWorldDatas(): void {
@@ -70,11 +75,11 @@ export class CoronavirusComponent implements OnInit {
 
   private initCountryDatas(): void {
     this.mainStatsFrance$ = undefined;
-    this.dataRecovered$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.Slug, 'recovered');
-    this.dataDeaths$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.Slug, 'deaths');
-    this.dataConfirmed$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.Slug, 'confirmed');
-    this.mainStats$ = this.coronavirusService.getMainStatsFromNovel(this.countryPipe.transform(this.selectedCountry.Country));
-    this.detailedStats$ = this.coronavirusService.getDetailedStatsByCountries(this.selectedCountry.Country);
+    this.dataRecovered$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.slug, 'recovered');
+    this.dataDeaths$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.slug, 'deaths');
+    this.dataConfirmed$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.slug, 'confirmed');
+    this.mainStats$ = this.coronavirusService.getMainStatsFromNovel(this.countryPipe.transform(this.selectedCountry.country));
+    this.detailedStats$ = this.coronavirusService.getDetailedStatsByCountries(this.selectedCountry.country);
   }
 
   trackByFn(index): void {
@@ -82,14 +87,14 @@ export class CoronavirusComponent implements OnInit {
   }
 
   onSelectCountry(): void {
-    this.router.navigate(['stats', this.selectedCountry.Slug]);
+    this.router.navigate(['stats', this.selectedCountry.slug]);
   }
 
   compareFn(optionOne, optionTwo): boolean {
     if (optionOne && optionTwo) {
-      return optionOne.Slug === optionTwo.Slug;
+      return optionOne.slug === optionTwo.slug;
     }
-    return optionOne.Slug === 'monde';
+    return optionOne.slug === 'monde';
   }
 
 }

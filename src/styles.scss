@@ -36,3 +36,38 @@ html, body { height: 100%; }
 .hero-body {
   padding: 1.5rem !important;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+$yellow: #FF8811;
+$red: #E83D49;
+
+/* Material Table */
+
+.mat-sort-header-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+@import "../node_modules/bulma/bulma.sass";
+
+

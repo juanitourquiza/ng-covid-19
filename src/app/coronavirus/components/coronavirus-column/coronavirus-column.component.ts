@@ -4,7 +4,7 @@ import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-coronavirus-column',
   templateUrl: './coronavirus-column.component.html',
-  styleUrls: ['./coronavirus-column.component.css'],
+  styleUrls: ['./coronavirus-column.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoronavirusColumnComponent implements OnInit {
