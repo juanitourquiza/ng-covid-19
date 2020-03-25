@@ -13,9 +13,20 @@ import { existsSync } from 'fs';
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {
   const server = express();
+  const domino = require('domino');
+  const fs = require('fs');
+  const path = require('path');
+
   server.use(compression());
   server.use(cookieparser());
   const distFolder = join(process.cwd(), 'dist/ng-coronavirus/browser');
+  const template = fs.readFileSync(path.join('.', 'dist/ng-coronavirus/browser', 'index.html')).toString();
+  const window = domino.createWindow(template);
+  // tslint:disable-next-line:no-string-literal
+  global['window'] = window;
+  // tslint:disable-next-line:no-string-literal
+  global['document'] = window.document;
+
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)

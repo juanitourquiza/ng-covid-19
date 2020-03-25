@@ -75,6 +75,7 @@ export class CoronavirusMapComponent implements OnInit, OnDestroy, OnChanges {
       polygonSeries.exclude = ['AQ'];
       this.chart = chart;
     });
+
   }
 
   initMapCases(polygonTemplate: any, polygonSeries: any, hs: any): void {

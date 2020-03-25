@@ -6,11 +6,11 @@
         <mat-label class="label" for="country-select">Sélectionner un pays infecté</mat-label>
         <mat-select [(ngModel)]="selectedCountry" (ngModelChange)="onSelectCountry()" [compareWith]="compareFn"
           disableRipple>
-           <mat-select-trigger>
+          <mat-select-trigger>
             <img *ngIf="!selectedCountry.code" width="32" height="32" src="../../../../assets/images/flag_world.png">
             <img *ngIf="selectedCountry.code" src="https://www.countryflags.io/{{selectedCountry.code}}/flat/32.png" />
             {{selectedCountry.translation}}
-           </mat-select-trigger>
+          </mat-select-trigger>
           <mat-option *ngFor="let country of countries; trackByFn" [value]="country" @.disabled>
             <img *ngIf="!country.code" width="32" height="32" src="../../../../assets/images/flag_world.png">
             <img *ngIf="country.code" src="https://www.countryflags.io/{{country.code}}/flat/32.png" />
@@ -61,8 +61,11 @@
       <ng-container *ngIf="detailedStats.value && detailedStats.value.length > 0">
         <div class="columns">
           <div class="column is-two-thirds" *ngIf="this.selectedCountry.country === 'Monde'">
+            <ng-container>
               <app-coronavirus-map [detailedStats]="detailedStats.value" [selectedTypeMap]="selectedTypeMap">
               </app-coronavirus-map>
+            </ng-container>
+
 
           </div>
           <div class="column">
