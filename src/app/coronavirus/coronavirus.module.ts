@@ -11,6 +11,7 @@ import { CoronavirusTableComponent } from './components/coronavirus-table/corona
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CoronavirusLinksComponent } from './containers/coronavirus-links/coronavirus-links.component';
 import { CoronavirusMapComponent } from './components/coronavirus-map/coronavirus-map.component';
+import { CoronavirusGraphCountryComponent } from './components/coronavirus-graph-country/coronavirus-graph-country.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CoronavirusMapComponent } from './components/coronavirus-map/coronaviru
     CoronavirusColumnComponent,
     CoronavirusTableComponent,
     CoronavirusLinksComponent,
-    CoronavirusMapComponent
+    CoronavirusMapComponent,
+    CoronavirusGraphCountryComponent
   ],
   imports: [
     CommonModule,
