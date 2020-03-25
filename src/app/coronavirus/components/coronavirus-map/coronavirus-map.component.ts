@@ -23,6 +23,7 @@ export class CoronavirusMapComponent implements OnInit, OnDestroy, OnChanges {
   chartDatasDeaths: any[] = [];
   chartDatasRecovered: any[] = [];
   myCountries: any[] = COUNTRIES;
+
   constructor(
     private readonly zone: NgZone,
     private readonly countryPipe: CountryPipe
