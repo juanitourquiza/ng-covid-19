@@ -1,7 +1,7 @@
 <!-- Select -->
 <div class="content">
   <mat-label class="label" for="country-select">Sélectionner un pays</mat-label>
-  <mat-select [(ngModel)]="selectedCountry" (ngModelChange)="onSelectCountry()" [compareWith]="compareFn" disableRipple>
+  <mat-select role="listbox" [(ngModel)]="selectedCountry" (ngModelChange)="onSelectCountry()" [compareWith]="compareFn" disableRipple>
     <mat-select-trigger>
       <img *ngIf="!selectedCountry.code" alt="monde" width="32" height="32"
         src="../../../../assets/images/flag_world.png" />
@@ -9,12 +9,12 @@
         src="https://www.countryflags.io/{{selectedCountry.code}}/flat/32.png" />
       {{selectedCountry.translation}}
     </mat-select-trigger>
-    <mat-option>
+    <mat-option role="option">
       <ngx-mat-select-search ngModel placeholderLabel="Rechercher un pays..." noEntriesFoundLabel="Pays inconnu"
         clearSearchInput="true" (ngModelChange)="filterCountries($event)">
       </ngx-mat-select-search>
     </mat-option>
-    <mat-option *ngFor="let country of filteredCountries; trackByFn" [value]="country">
+    <mat-option role="option" *ngFor="let country of filteredCountries; trackByFn" [value]="country">
       <img *ngIf="!country.code" alt="monde" width="32" height="32" src="../../../../assets/images/flag_world.png" />
       <img *ngIf="country.code" alt="selectedCountry.translation"
         src="https://www.countryflags.io/{{country.code}}/flat/32.png" />
