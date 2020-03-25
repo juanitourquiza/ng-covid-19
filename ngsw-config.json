@@ -13,7 +13,8 @@
           "/sitemap.xml",
           "/robots.txt",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/assets/*.png"
         ]
       }
     }, {

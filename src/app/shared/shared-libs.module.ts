@@ -6,6 +6,7 @@ import { LoadingPipe } from './pipes/loading.pipe';
 import { SymbolNumberPipe } from './pipes/symbol-number.pipe';
 import { CountryPipe } from './pipes/country.pipe';
 import { OperationPipe } from './pipes/operation.pipe';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 @NgModule({
   declarations: [
@@ -23,12 +24,14 @@ import { OperationPipe } from './pipes/operation.pipe';
     SymbolNumberPipe,
     CountryPipe,
     CountryFilterPipe,
-    OperationPipe
+    OperationPipe,
+    NgxMatSelectSearchModule
   ],
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMatSelectSearchModule
   ]
 })
 export class SharedLibsModule { }

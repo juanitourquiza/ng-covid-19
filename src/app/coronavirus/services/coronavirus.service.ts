@@ -44,7 +44,7 @@ export class CoronavirusService {
     return this.httpClient.get(`${this.url2}/countries`).pipe(
       map((list: any) =>
         list
-          .filter((countryItem: any) => countryItem.country === country)
+          .filter((countryItem: any) => countryItem.countryInfo.iso2 === country)
           .map((item: any) =>
             ({
               ...item,
@@ -57,6 +57,7 @@ export class CoronavirusService {
     return this.httpClient.get(`${this.url}/countries/${country}`).pipe(
       map((item: any) => ({
         ...item,
+        country: item.countryRegion,
         cases: item.confirmed.value,
         deaths: item.deaths.value,
         recovered: item.recovered.value
@@ -90,7 +91,8 @@ export class CoronavirusService {
             todayCases: '',
             cases: item.confirmed,
             todayDeaths: '',
-            country: item.provinceState ? `${item.countryRegion} - ${item.provinceState}` : `${item.countryRegion}`,
+            provinceState: item.provinceState,
+            country: item.countryRegion,
             deathRate: ((item.deaths / item.confirmed) * 100).toFixed(1),
             recoveredRate: ((item.recovered / item.confirmed) * 100).toFixed(1)
           })))

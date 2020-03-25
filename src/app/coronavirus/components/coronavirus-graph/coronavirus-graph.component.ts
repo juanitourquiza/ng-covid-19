@@ -18,7 +18,7 @@ export class CoronavirusGraphComponent implements OnInit {
   dates: string[] = [];
   chartDatas: any[];
   colorScheme = {
-    domain: ['#FF8811', '#E83D49', '#48c774']
+    domain: ['#ffbb00', '#f9461c', '#43D787']
   };
   constructor(private readonly datePipe: DatePipe) { }
 

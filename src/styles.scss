@@ -7,7 +7,7 @@ html, body { height: 100%; }
 }
 
 .mat-progress-spinner circle {
-  stroke: violet;
+  stroke: #0069cc;
 }
 
 .mat-progress-spinner {
@@ -57,8 +57,12 @@ html, body { height: 100%; }
   background: grey;
 }
 
-$yellow: #FF8811;
-$red: #E83D49;
+$green: #43D787;
+$info: #0069cc;
+$yellow: 	#ffbb00;
+$warning-invert: white;
+$red: 	#f9461c;
+$success-invert: white;
 
 /* Material Table */
 
@@ -66,6 +70,14 @@ $red: #E83D49;
   display: flex;
   justify-content: center;
 }
+
+.mat-select-search-inside-mat-option .mat-select-search-input {
+  width: 100%;
+  border: none;
+  font-size: 1em;
+  color: black;
+}
+
 
 /* Utilities */
 @import "../node_modules/bulma/sass/utilities/_all.sass";
@@ -84,13 +96,13 @@ $red: #E83D49;
 
 /* Components */
 @import "../node_modules/bulma/sass/components/navbar.sass";
-
+@import "../node_modules/bulma/sass/components/message.sass";
 /* Grid */
 @import "../node_modules/bulma/sass/grid/_all.sass";
 
 /* Layout */
 @import "../node_modules/bulma/sass/layout/_all.sass";
 
-
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 

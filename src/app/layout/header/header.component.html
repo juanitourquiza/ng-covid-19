@@ -1,6 +1,6 @@
-<nav class="navbar is-light is-transparent" role="navigation" aria-label="main navigation">
+<nav class="navbar is-transparent is-info" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="./" title="Cas de coronavirus, COVID-19">
+    <a class="navbar-item logo" href="./" title="Cas de coronavirus, COVID-19">
       <h1 class="nav-item title is-primary">CAS<span class="bold">CORONAVIRUS</span>.FR</h1>
     </a>
     <a role="button" class="navbar-burger burger" (click)="expand()" aria-label="menu" aria-expanded="false"
@@ -10,47 +10,45 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <div id="menu" class="navbar-menu" [class.is-active]="isActive" >
+  <div id="menu" class="navbar-menu" [class.is-active]="isActive">
     <div class="navbar-end">
-      <div class="navbar-item">
-        <a class="navbar-item" routerLink="stats">
-          Statistiques par pays
+      <a class="navbar-item" routerLink="stats" (click)="expand()">
+        Statistiques par pays
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Informations
         </a>
-        <div class="navbar-item has-dropdown is-hoverable" >
-          <a class="navbar-link">
-            Informations
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/infos/maladie-coronavirus" (click)="expand()">
+            Coronavirus COVID-19
           </a>
-          <div class="navbar-dropdown" >
-            <a class="navbar-item" routerLink="/infos/maladie-coronavirus"  >
-              Coronavirus COVID-19
-            </a>
-            <a class="navbar-item" routerLink="/infos/conseils">
-              Conseils pour se protéger
-            </a>
-            <a class="navbar-item" routerLink="/infos/gouvernement">
-              Gouvernement
-            </a>
-            <a class="navbar-item" routerLink="/infos/maladie-test-coronavirus">
-              <strong>Avez-vous les symptômes du coronavirus ?</strong>
-            </a>
-          </div>
+          <a class="navbar-item" routerLink="/infos/conseils" (click)="expand()">
+            Conseils pour se protéger
+          </a>
+          <a class="navbar-item" routerLink="/infos/gouvernement" (click)="expand()">
+            Gouvernement
+          </a>
+          <a class="navbar-item" routerLink="/infos/maladie-test-coronavirus" (click)="expand()">
+            <strong>Avez-vous les symptômes du coronavirus ?</strong>
+          </a>
         </div>
-
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            Télécharger les attestations
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Télécharger les attestations
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item"
+            href="https://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2020/03/attestation_de_deplacement_derogatoire.pdf"
+            target="_blank" rel="noopener noreferrer" (click)="expand()">
+            Attestation individuelle
           </a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item"
-              href="https://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2020/03/attestation_de_deplacement_derogatoire.pdf" target="_blank" rel="noopener noreferrer">
-              Attestation individuelle
-            </a>
-            <a class="navbar-item"
-              href="https://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2020/03/justificatif_de_deplacement_professionnel.pdf" target="_blank" rel="noopener noreferrer">
-              Attestation employeur
-            </a>
-          </div>
+          <a class="navbar-item"
+            href="https://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2020/03/justificatif_de_deplacement_professionnel.pdf"
+            target="_blank" rel="noopener noreferrer" (click)="expand()">
+            Attestation employeur
+          </a>
         </div>
       </div>
     </div>

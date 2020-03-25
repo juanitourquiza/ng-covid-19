@@ -12,7 +12,7 @@ export class CoronavirusColumnComponent implements OnInit {
   @Input() data;
   chartDatas: any[];
   colorScheme = {
-    domain: ['#FF0000', '#00BFFF']
+    domain: ['#FF0000', '#0069cc']
   };
 
   constructor(private readonly datePipe: DatePipe) { }

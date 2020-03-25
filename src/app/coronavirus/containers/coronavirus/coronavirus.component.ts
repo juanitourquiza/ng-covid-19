@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Component, OnInit, ChangeDetectionStrategy, PLATFORM_ID, Inject, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, PLATFORM_ID, Inject } from '@angular/core';
 import { CoronavirusService } from '@coronavirus/services/coronavirus.service';
 import { DetailedStat, MainStat } from '@coronavirus/models/coronavirus.models';
 import { isPlatformBrowser } from '@angular/common';
@@ -22,9 +22,12 @@ export class CoronavirusComponent implements OnInit {
   mainStats$: Observable<MainStat>;
   mainStatsFrance$: Observable<MainStat>;
   detailedStats$: Observable<DetailedStat>;
+
   countries: any[] = COUNTRIES;
+  filteredCountries: any[] = [];
   selectedCountry: any = { country: 'Monde', slug: 'monde', translation: 'Monde' };
   selectedTypeMap = 'cases';
+
   isBrowser = isPlatformBrowser(this.platformId);
 
   constructor(
@@ -37,6 +40,7 @@ export class CoronavirusComponent implements OnInit {
 
   ngOnInit(): void {
     this.data$ = this.coronavirusService.getDailyDatas();
+    this.filteredCountries = this.countries;
     this.route.params.subscribe(params => {
       if (params.country) {
         this.selectedCountry = this.countries.find((country) => country.slug === params.country);
@@ -69,7 +73,7 @@ export class CoronavirusComponent implements OnInit {
     this.dataRecovered$ = this.coronavirusService.getDailyDatasByCountry('France', 'recovered');
     this.dataDeaths$ = this.coronavirusService.getDailyDatasByCountry('France', 'deaths');
     this.dataConfirmed$ = this.coronavirusService.getDailyDatasByCountry('France', 'confirmed');
-    this.mainStats$ = this.coronavirusService.getMainStatsFromNovel('France');
+    this.mainStats$ = this.coronavirusService.getMainStatsFromNovel('FR');
     this.detailedStats$ = this.coronavirusService.getFranceStats();
   }
 
@@ -78,8 +82,21 @@ export class CoronavirusComponent implements OnInit {
     this.dataRecovered$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.slug, 'recovered');
     this.dataDeaths$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.slug, 'deaths');
     this.dataConfirmed$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.slug, 'confirmed');
-    this.mainStats$ = this.coronavirusService.getMainStatsFromNovel(this.countryPipe.transform(this.selectedCountry.country));
-    this.detailedStats$ = this.coronavirusService.getDetailedStatsByCountries(this.selectedCountry.country);
+    this.mainStats$ = this.coronavirusService.getMainStatsFromNovel(this.selectedCountry.code);
+    this.detailedStats$ = this.coronavirusService.getDetailedStatsByCountries(this.selectedCountry.code);
+  }
+
+  filterCountries(value: string) {
+    // get the search keyword
+    let search = value;
+    if (!search) {
+      this.filteredCountries = this.countries;
+      return;
+    } else {
+      search = search.toLowerCase();
+    }
+    // filter the countries
+    this.filteredCountries = this.countries.filter(country => country.translation.toLowerCase().indexOf(search) > -1);
   }
 
   trackByFn(index): void {
