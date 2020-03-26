@@ -11,7 +11,7 @@ import * as Papa from 'papaparse';
 export class CoronavirusService {
 
   private readonly url = 'https://covid19.mathdro.id/api';
-  private readonly url2 = 'https://corona.lmao.ninja';
+  private readonly url2 = 'https://api-novel-coronavirus.herokuapp.com';
   private readonly urlGouv = 'https://www.data.gouv.fr/fr';
   private readonly urlCovidApi = 'https://api.covid19api.com';
 
