@@ -88,24 +88,20 @@ export class CoronavirusMapComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   private initDatasWorld(): void {
-    for (let j = 0; j < this.detailedStats.length; j++) {
-      for (let i = 0; i < this.myCountries.length; i++) {
-        if (this.countryPipe.transform(this.myCountries[i].country) === this.detailedStats[j].country) {
-          this.chartDatasCases.push({
-            id: this.myCountries[i].code,
-            value: this.detailedStats[j].cases
-          });
-          this.chartDatasDeaths.push({
-            id: this.myCountries[i].code,
-            value: this.detailedStats[j].deaths
-          });
-          this.chartDatasRecovered.push({
-            id: this.myCountries[i].code,
-            value: this.detailedStats[j].recovered
-          });
-        }
-      }
-    }
+    this.detailedStats.forEach((stat) => {
+      this.chartDatasCases.push({
+        id: stat.code,
+        value: stat.cases
+      });
+      this.chartDatasDeaths.push({
+        id: stat.code,
+        value: stat.deaths
+      });
+      this.chartDatasRecovered.push({
+        id: stat.code,
+        value: stat.recovered
+      });
+    });
   }
 
   private initMapWorld(): void {

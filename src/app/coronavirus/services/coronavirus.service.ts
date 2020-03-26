@@ -48,7 +48,9 @@ export class CoronavirusService {
           .map((item: any) =>
             ({
               ...item,
-              lastUpdate: list.Date
+              lastUpdate: list.Date,
+              code: item.countryInfo.iso2,
+              cases: item.cases
             }))[0])
     );
   }
@@ -57,6 +59,7 @@ export class CoronavirusService {
     return this.httpClient.get(`${this.url}/countries/${country}`).pipe(
       map((item: any) => ({
         ...item,
+        code: item.iso2,
         country: item.countryRegion,
         cases: item.confirmed.value,
         deaths: item.deaths.value,
@@ -75,6 +78,7 @@ export class CoronavirusService {
         list.map(item =>
           ({
             ...item,
+            code: item.countryInfo.iso2,
             cases: item.cases,
             deathRate: ((item.deaths / item.cases) * 100).toFixed(1),
             recoveredRate: ((item.recovered / item.cases) * 100).toFixed(1)
@@ -91,6 +95,7 @@ export class CoronavirusService {
             todayCases: '',
             cases: item.confirmed,
             todayDeaths: '',
+            code: item.iso2,
             provinceState: item.provinceState,
             country: item.countryRegion,
             deathRate: ((item.deaths / item.confirmed) * 100).toFixed(1),
