@@ -20,13 +20,13 @@ export class CoronavirusComponent implements OnInit {
   dataRecovered$: Observable<any>;
   dataDeaths$: Observable<any>;
   dataConfirmed$: Observable<any>;
-  mainStats$: Observable<MainStat>;
+  tableStatsByCountry$: Observable<DetailedStat>;
   mainStatsFrance$: Observable<MainStat>;
   detailedStats$: Observable<DetailedStat>;
 
   countries: any[] = COUNTRIES;
   filteredCountries: any[] = [];
-  selectedCountry: any = { country: 'Monde', slug: 'monde', translation: 'Monde' };
+  selectedCountry: any = { country: 'Monde', slug: 'monde', translation: 'Monde', code: 'WL' };
   selectedTypeMap = 'cases';
 
   isBrowser = isPlatformBrowser(this.platformId);
@@ -49,8 +49,6 @@ export class CoronavirusComponent implements OnInit {
       if (!params.country) {
         this.initWorldDatas();
         this.initMetaTagWorld();
-        this.detailedStats$ = this.coronavirusService.getWorldDetailedStats();
-        this.mainStats$ = this.coronavirusService.getMainStats();
         return;
       }
       this.selectedCountry = this.countries.find((country) => country.slug === params.country);
@@ -140,27 +138,43 @@ export class CoronavirusComponent implements OnInit {
   }
 
   private initWorldDatas(): void {
+
+    /* Disable stat france*/
     this.mainStatsFrance$ = undefined;
-    this.mainStats$ = this.coronavirusService.getMainStats();
+
+    /* For stats and map */
     this.detailedStats$ = this.coronavirusService.getWorldDetailedStats();
   }
 
   private initFranceDatas(): void {
+     /* Disable stat france*/
     this.mainStatsFrance$ = undefined;
+
+    /* Graph page pays en bas */
     this.dataRecovered$ = this.coronavirusService.getDailyDatasByCountry('France', 'recovered');
     this.dataDeaths$ = this.coronavirusService.getDailyDatasByCountry('France', 'deaths');
     this.dataConfirmed$ = this.coronavirusService.getDailyDatasByCountry('France', 'confirmed');
-    this.mainStats$ = this.coronavirusService.getMainStatsFromNovel('FR');
-    this.detailedStats$ = this.coronavirusService.getFranceStats();
+
+    /* Tableau page pays */
+    this.tableStatsByCountry$ = this.coronavirusService.getFranceStats();
+
+    /* For stats and map */
+    this.detailedStats$ = this.coronavirusService.getWorldDetailedStats();
   }
 
   private initCountryDatas(): void {
     this.mainStatsFrance$ = undefined;
+
+    /* Graph page pays en bas */
     this.dataRecovered$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.slug, 'recovered');
     this.dataDeaths$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.slug, 'deaths');
     this.dataConfirmed$ = this.coronavirusService.getDailyDatasByCountry(this.selectedCountry.slug, 'confirmed');
-    this.mainStats$ = this.coronavirusService.getMainStatsFromNovel(this.selectedCountry.code);
-    this.detailedStats$ = this.coronavirusService.getDetailedStatsByCountries(this.selectedCountry.code);
+
+    /* For stats and map */
+    this.detailedStats$ = this.coronavirusService.getWorldDetailedStats();
+
+    /* Tableau page pays */
+    this.tableStatsByCountry$ = this.coronavirusService.getDetailedStatsByCountries(this.selectedCountry.code);
   }
 
 }

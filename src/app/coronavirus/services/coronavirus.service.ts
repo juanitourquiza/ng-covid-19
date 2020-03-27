@@ -40,7 +40,7 @@ export class CoronavirusService {
       })));
   }
 
-  getMainStatsFromNovel(country: string): Observable<MainStat> {
+  getMainStatsFromNovel(country: string): Observable<DetailedStat> {
     return this.httpClient.get(`${this.url2}/countries`).pipe(
       map((list: any) =>
         list

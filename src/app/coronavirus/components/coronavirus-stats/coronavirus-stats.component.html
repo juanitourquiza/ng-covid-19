@@ -8,10 +8,7 @@
         <div class="tile is-parent" (click)="updateMap('cases')">
           <article class="tile is-child notification is-warning">
             <p class="title">{{mainStats.cases}}
-              <span class="increase" *ngIf="selectedCountry.country === 'Monde'">
-                {{mainStats.cases | operation : data[data.length - 1].confirmed.total : '-'  | symbolNumber}}
-              </span>
-              <span class="increase" *ngIf="selectedCountry.country !== 'Monde'">
+              <span class="increase">
                 {{mainStats.todayCases  | symbolNumber}}
               </span>
             </p>
@@ -22,10 +19,7 @@
           <article class="tile is-child notification is-danger">
             <p class="title">
               {{mainStats.deaths}}
-              <span class="increase" *ngIf="selectedCountry.country === 'Monde'">
-                {{mainStats.deaths | operation : data[data.length - 1].deaths.total : '-'  | symbolNumber}}
-              </span>
-              <span class="increase" *ngIf="selectedCountry.country !== 'Monde'">
+              <span class="increase">
                 {{mainStats.todayDeaths  | symbolNumber}}
               </span>
             </p>
@@ -36,9 +30,6 @@
           <article class="tile is-child notification is-success" (click)="updateMap('recovered')">
             <p class="title">
               {{mainStats.recovered}}
-              <!-- <span class="increase" *ngIf="selectedCountry.country === 'Monde'">
-                {{mainStats.recovered | operation : data[data.length - 1].recovered.total : '-'  | symbolNumber}}
-              </span> -->
             </p>
             <p class="subtitle">Guéris</p>
           </article>

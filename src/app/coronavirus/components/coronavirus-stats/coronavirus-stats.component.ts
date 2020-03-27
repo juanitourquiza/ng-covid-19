@@ -9,9 +9,7 @@ import { Component, Input, ChangeDetectionStrategy, EventEmitter, Output } from 
 export class CoronavirusStatsComponent {
 
   @Input() mainStats;
-  @Input() data;
   @Input() selectedCountry;
-
   @Output() readonly updateMapEvent: EventEmitter<string> = new EventEmitter<string>(true);
 
   updateMap(type: string): void {

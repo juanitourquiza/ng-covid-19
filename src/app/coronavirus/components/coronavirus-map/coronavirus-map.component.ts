@@ -35,6 +35,9 @@ export class CoronavirusMapComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnInit(): void {
+    if (!this.detailedStats.length) {
+      this.detailedStats = [this.detailedStats];
+    }
     if (this.selectedCountry.country !== 'France') {
       this.initDatasWorld();
     } else {
