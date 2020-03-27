@@ -6,11 +6,16 @@ export const routes: Routes = [
     loadChildren: () => import('./coronavirus/coronavirus.module')
       .then(m => m.CoronavirusModule),
     path: ''
+  },
+  {
+    loadChildren: () => import('./info/info.module')
+      .then(m => m.InfoModule),
+    path: 'infos'
   }
 ];
 
 @NgModule({
   exports: [RouterModule],
-  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})]
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload', initialNavigation: 'enabled' })]
 })
 export class AppRoutingModule { }

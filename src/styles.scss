@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+
+.is-spaced {
+  margin-top: 1.5rem;
+}
+
+.mat-progress-spinner circle {
+  stroke: #0069cc;
+}
+
+.mat-progress-spinner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chart-legend .legend-label {
+  color: black !important;
+}
+
+.chart-legend .legend-title {
+  text-align: center !important;
+}
+
+.chart-legend .legend-labels {
+  background: none !important;
+  text-align: center !important;
+}
+
+.chart-wrapper {
+  height: 400px;
+  margin-bottom: 2em;
+}
+
+.hero-body {
+  padding: 1.5rem !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+$green: #43D787;
+$info: #0069cc;
+$yellow: 	#ffbb00;
+$warning-invert: white;
+$red: 	#f9461c;
+$success-invert: white;
+
+/* Material Table */
+
+.mat-sort-header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-select-search-inside-mat-option .mat-select-search-input {
+  width: 100%;
+  border: none;
+  font-size: 1em;
+  color: black;
+}
+
+
+/* Utilities */
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+
+/* Base */
+@import "../node_modules/bulma/sass/base/_all.sass";
+
+/* Elements */
+@import "../node_modules/bulma/sass/elements/content.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/elements/notification.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+
+/* Form */
+@import "../node_modules/bulma/sass/form/_all.sass";
+
+/* Components */
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/components/message.sass";
+/* Grid */
+@import "../node_modules/bulma/sass/grid/_all.sass";
+
+/* Layout */
+@import "../node_modules/bulma/sass/layout/_all.sass";
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+

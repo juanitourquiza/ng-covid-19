@@ -1,24 +1,30 @@
 # Covid-19 Angular Progressive Web App
-Progressive Web App construida con Angular para Covid-19 visualización de datos : https://juanitourquiza.github.io/covid19/
+Progressive Web App built with Angular for Covid-19 data visualization : https://souryvath.github.io/ng-covid-19/
 
-## Instalación
-Para clonar el repositorio `git clone https://github.com/juanitourquiza/ng-covid-19.git`.
+## Installation
+Clone the repository `git clone https://github.com/souryvath/ng-covid-19.git`.
 
 `cd ng-covid-19`
 
-Ejecuta `npm install` para instalar paquetes.
+Run `npm install` to install packages.
 
-Ejecuta `npm start` para servidor de desarrollo. Navega en `http://localhost:4200/`. El app carga automaticamente con cada cambio.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
-Ejecuta `npm run build:prod` para construir el proyecto y ponerlos en producción. Se debe utilizar la información de la carpeta `dist/`.
+Run `npm run build:prod` to build the project for a production build. The build artifacts will be stored in the `dist/` directory.
 
-## Datos de la API
+## Data API
 - https://github.com/mathdroid/covid-19-api
 - https://github.com/NovelCOVID/API
 
-## Frameworks y librerías
+## Frameworks and libraries
 - Angular : https://github.com/angular/angular
 - Angular Material : https://material.angular.io/guide/getting-started
 - Bulma : https://github.com/jgthms/bulma
 - ng-apexcharts : https://github.com/apexcharts/ng-apexcharts
+
+## Contribution
+Feel free to contribute :)
+
+
+

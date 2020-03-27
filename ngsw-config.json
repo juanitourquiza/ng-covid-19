@@ -10,8 +10,11 @@
           "/favicon.ico",
           "/index.html",
           "/manifest.webmanifest",
+          "/sitemap.xml",
+          "/robots.txt",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/assets/*.png"
         ]
       }
     }, {

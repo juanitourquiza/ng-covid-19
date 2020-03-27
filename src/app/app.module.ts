@@ -1,12 +1,13 @@
+import { CountryFilterPipe } from './shared/pipes/country-filter.pipe';
+import { CountryPipe } from './shared/pipes/country.pipe';
 import { LayoutModule } from './layout/layout.module';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { DatePipe } from '@angular/common';
+import { OperationPipe } from '@shared/pipes/operation.pipe';
 
 @NgModule({
   bootstrap: [
@@ -15,13 +16,17 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent
   ],
+  providers: [
+    DatePipe,
+    CountryPipe,
+    CountryFilterPipe,
+    OperationPipe
+  ],
   imports: [
-    BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    LayoutModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    LayoutModule
   ]
 })
 export class AppModule { }

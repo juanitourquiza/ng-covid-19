@@ -4,15 +4,18 @@ table {
 
 table td {
   vertical-align: middle;
-  font-size: 1em;
+  text-align: center;
 }
+
+
 
 table th {
   vertical-align: middle;
+  font-weight: bold;
 }
 
 .container-table {
-  height: 600px;
+  height: 60vh;
   overflow: auto;
 }
 
@@ -22,14 +25,8 @@ th.mat-header-cell:first-of-type {
 
 td.mat-cell:first-of-type {
   padding-left: 0;
-  font-size: 0.9em;
 }
 
 .rate {
-  font-size: 0.8em;
-}
-
-img.pequena {
-  width: 20px;
-  height: 10px;
+  font-size: 0.9em;
 }

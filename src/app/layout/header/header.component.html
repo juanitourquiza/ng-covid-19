@@ -1,7 +1,7 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-transparent is-info" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a href="./" title="COVID-19">
-      <h1 class="nav-item title">COVID-19</h1>
+    <a class="navbar-item logo" href="./" title="Cas de coronavirus, COVID-19">
+      <h1 class="nav-item title is-primary">covid19.hackeruna.com</h1>
     </a>
     <a role="button" class="navbar-burger burger" (click)="expand()" aria-label="menu" aria-expanded="false"
       data-target="menu">
@@ -12,23 +12,45 @@
   </div>
   <div id="menu" class="navbar-menu" [class.is-active]="isActive">
     <div class="navbar-end">
-      <div class="navbar-item">
-        <a class="navbar-item" href="https://coronavirusecuador.com/" target="new">
+      <a class="navbar-item" routerLink="stats" (click)="expand()">
+        Estadística por país
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
           Información
         </a>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            Documentos
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/infos/enfermedad-coronavirus">
+            Coronavirus COVID-19
           </a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://www.gob.ec/tramites/1848/webform" target="new" target="_blank">
-              Salvoconducto Ecuador
-            </a>
-            <a class="navbar-item" href="https://coronavirusecuador.com/test-covid-19/" target="new" target="_blank">
-              Revisa tus Síntomas
-            </a>
-          </div>
+          <a class="navbar-item" routerLink="/infos/consejos">
+            Consejos para protegerte
+          </a>
+          <a class="navbar-item" routerLink="/infos/gobierno">
+            Gobierno
+          </a>
+          <a class="navbar-item" routerLink="/infos/enfermedad-test-coronavirus">
+            <strong>¿Tienes síntomas de coronavirus?</strong>
+          </a>
         </div>
+      </div>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Documentos
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://www.gob.ec/tramites/1848/webform" target="_blank"
+            rel="noopener noreferrer">
+            Salvoconducto Ecuador
+          </a>
+          <a class="navbar-item" href="https://coronavirusecuador.com/" target="_blank" rel="noopener noreferrer">
+            Ministerio de Salud
+          </a>
+        </div>
+      </div>
+      <div class="navbar-item">
+        <button class="button is-primary" *ngIf="showButton" (click)="addToHomeScreen()">Agregue el app</button>
       </div>
     </div>
   </div>

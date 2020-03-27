@@ -2,141 +2,113 @@ import {
   Component,
   OnInit,
   Input,
-  ViewChild,
   ChangeDetectionStrategy
 } from "@angular/core";
-import {
-  ChartComponent,
-  ApexAxisChartSeries,
-  ApexChart,
-  ApexXAxis,
-  ApexDataLabels,
-  ApexStroke,
-  ApexMarkers,
-  ApexYAxis,
-  ApexGrid,
-  ApexTitleSubtitle,
-  ApexLegend
-} from "ng-apexcharts";
-
-export interface ChartOptions {
-  series: ApexAxisChartSeries;
-  chart: ApexChart;
-  xaxis: ApexXAxis;
-  stroke: ApexStroke;
-  dataLabels: ApexDataLabels;
-  markers: ApexMarkers;
-  tooltip: any; // ApexTooltip;
-  yaxis: ApexYAxis;
-  grid: ApexGrid;
-  legend: ApexLegend;
-  title: ApexTitleSubtitle;
-}
-
+import { DatePipe } from "@angular/common";
 @Component({
   selector: "app-coronavirus-graph",
   templateUrl: "./coronavirus-graph.component.html",
-  styleUrls: ["./coronavirus-graph.component.css"],
+  styleUrls: ["./coronavirus-graph.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoronavirusGraphComponent implements OnInit {
   @Input() data;
-  @ViewChild("chart") chart: ChartComponent;
-  totalConfirmed: number[] = [];
-  totalRecovered: number[] = [];
+  @Input() dataDeaths;
+  @Input() dataRecovered;
+  @Input() dataConfirmed;
+  totalConfirmed: any[] = [];
+  totalRecovered: any[] = [];
+  totalDeaths: any[] = [];
   dates: string[] = [];
-  chartOptions: Partial<ChartOptions>;
-
-  constructor() {}
+  chartDatas: any[];
+  colorScheme = {
+    domain: ["#ffbb00", "#f9461c", "#43D787"]
+  };
+  constructor(private readonly datePipe: DatePipe) {}
 
   ngOnInit(): void {
     this.initDatas();
-    this.chartOptions = {
-      series: [
-        {
-          name: "Confirmados",
-          data: this.totalConfirmed
-        },
-        {
-          name: "Curados",
-          data: this.totalRecovered
-        }
-      ],
-      chart: {
-        height: "auto",
-        type: "line",
-        toolbar: {
-          show: false
-        }
+    this.chartDatas = [
+      {
+        name: "Identificado",
+        series: this.totalConfirmed
       },
-      dataLabels: {
-        enabled: false
+      {
+        name: "Muertos",
+        series: this.totalDeaths
       },
-
-      title: {
-        text: "Casos de coronavirus en todo el mundo",
-        align: "left"
-      },
-      legend: {
-        tooltipHoverFormatter(val, opts) {
-          return (
-            val +
-            " - <strong>" +
-            opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
-            "</strong>"
-          );
-        }
-      },
-      markers: {
-        size: 0,
-        hover: {
-          sizeOffset: 6
-        }
-      },
-      xaxis: {
-        labels: {
-          trim: false
-        },
-        categories: this.dates
-      },
-      tooltip: {
-        y: [
-          {
-            title: {
-              formatter(val) {
-                return val;
-              }
-            }
-          },
-          {
-            title: {
-              formatter(val) {
-                return val;
-              }
-            }
-          },
-          {
-            title: {
-              formatter(val) {
-                return val;
-              }
-            }
-          }
-        ]
-      },
-      grid: {
-        borderColor: "#f1f1f1"
+      {
+        name: "Recuperados",
+        series: this.totalRecovered
       }
-    };
+    ];
+  }
+
+  private initDatasWorld(): void {
+    this.data.forEach((element, index) => {
+      if (this.data.length - index < 15) {
+        if (element.confirmed && element.confirmed.total) {
+          const caseItem = {
+            name: this.datePipe.transform(element.reportDate, "dd/MM"),
+            value: element.confirmed.total
+          };
+          this.totalConfirmed.push(caseItem);
+        }
+
+        if (element.recovered && element.recovered.total) {
+          const recoveredItem = {
+            name: this.datePipe.transform(element.reportDate, "dd/MM"),
+            value: element.recovered.total
+          };
+          this.totalRecovered.push(recoveredItem);
+        }
+        if (element.deaths && element.deaths.total) {
+          const deathItem = {
+            name: this.datePipe.transform(element.reportDate, "dd/MM"),
+            value: element.deaths.total
+          };
+
+          this.totalDeaths.push(deathItem);
+        }
+      }
+    });
+  }
+
+  private initDatasCountry(): void {
+    this.dataDeaths.forEach((element, index) => {
+      if (this.dataDeaths.length - index < 15) {
+        const deathItem = {
+          name: this.datePipe.transform(element.date, "dd/MM"),
+          value: element.totalCases
+        };
+        this.totalDeaths.push(deathItem);
+      }
+    });
+    this.dataConfirmed.forEach((element, index) => {
+      if (this.dataConfirmed.length - index < 15) {
+        const caseItem = {
+          name: this.datePipe.transform(element.date, "dd/MM"),
+          value: element.totalCases
+        };
+        this.totalConfirmed.push(caseItem);
+      }
+    });
+    this.dataRecovered.forEach((element, index) => {
+      if (this.dataRecovered.length - index < 15) {
+        const caseItem = {
+          name: this.datePipe.transform(element.date, "dd/MM"),
+          value: element.totalCases
+        };
+        this.totalRecovered.push(caseItem);
+      }
+    });
   }
 
   private initDatas(): void {
-    this.data.forEach((element, index) => {
-      if (this.data.length - index < 15) {
-        this.totalConfirmed.push(element.totalConfirmed);
-        this.dates.push(element.reportDateString);
-        this.totalRecovered.push(element.totalRecovered);
-      }
-    });
+    if (this.data) {
+      this.initDatasWorld();
+    } else {
+      this.initDatasCountry();
+    }
   }
 }

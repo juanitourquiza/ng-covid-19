@@ -1,20 +1,15 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  ViewChild,
-  ChangeDetectionStrategy
-} from "@angular/core";
-import { MatSort } from "@angular/material/sort";
-import { MatTableDataSource } from "@angular/material/table";
+import { Component, OnInit, Input, ViewChild, ChangeDetectionStrategy } from '@angular/core';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: "app-coronavirus-table",
-  templateUrl: "./coronavirus-table.component.html",
-  styleUrls: ["./coronavirus-table.component.css"],
+  selector: 'app-coronavirus-table',
+  templateUrl: './coronavirus-table.component.html',
+  styleUrls: ['./coronavirus-table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoronavirusTableComponent implements OnInit {
+
   @Input() detailedStats;
   @Input() selectedCountry;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
@@ -28,17 +23,13 @@ export class CoronavirusTableComponent implements OnInit {
   }
 
   private initDisplayColumns(): void {
-    if (this.selectedCountry === "Mundo") {
-      this.displayedColumns = [
-        "country",
-        "cases",
-        "todayCases",
-        "deaths",
-        "todayDeaths",
-        "recovered"
-      ];
+    if (this.selectedCountry.country === 'Monde') {
+      this.displayedColumns = ['country', 'cases', 'todayCases', 'deaths', 'todayDeaths', 'recovered'];
+    } else if (this.selectedCountry.country === 'France') {
+      this.displayedColumns = ['country', 'cases', 'todayCases'];
     } else {
-      this.displayedColumns = ["country", "cases", "deaths", "recovered"];
+      this.displayedColumns = ['country', 'cases', 'deaths', 'recovered'];
     }
   }
+
 }
