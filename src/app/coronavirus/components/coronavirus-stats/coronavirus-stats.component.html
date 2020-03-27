@@ -7,7 +7,7 @@
       <div class="tile is-ancestor">
         <div class="tile is-parent" (click)="updateMap('cases')">
           <article class="tile is-child notification is-warning">
-            <p class="title">{{mainStats.cases}}
+            <p class="title">{{mainStats.cases | number}}
               <span class="increase">
                 {{mainStats.todayCases  | symbolNumber}}
               </span>
@@ -18,7 +18,7 @@
         <div class="tile is-parent" (click)="updateMap('deaths')">
           <article class="tile is-child notification is-danger">
             <p class="title">
-              {{mainStats.deaths}}
+              {{mainStats.deaths | number}}
               <span class="increase">
                 {{mainStats.todayDeaths  | symbolNumber}}
               </span>
@@ -29,7 +29,7 @@
         <div class="tile is-parent">
           <article class="tile is-child notification is-success" (click)="updateMap('recovered')">
             <p class="title">
-              {{mainStats.recovered}}
+              {{mainStats.recovered | number}}
             </p>
             <p class="subtitle">Guéris</p>
           </article>
