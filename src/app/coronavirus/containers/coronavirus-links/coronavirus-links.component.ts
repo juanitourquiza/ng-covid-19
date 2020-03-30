@@ -16,18 +16,15 @@ export class CoronavirusLinksComponent implements OnInit {
   }
 
   private initMetaTag(): void {
-    this.title.setTitle(
-      "Cas Coronavirus - suivez le COVID-19 en France et dans le monde"
-    );
+    this.title.setTitle("Casos de covid19 en Ecuador y el mundo");
     const tags = [
       {
         name: "description",
-        content:
-          "Cas de Coronavirus COVID-19 - Suivez les cas et morts du virus en France et dans le monde entier : Chine, Italie, Espagne avec des statistiques détaillées en temps réel"
+        content: "Casos de covid19 en Ecuador y el mundo"
       },
       { name: "og:type", content: "website" },
-      { name: "og:site_name", content: "https://www.cascoronavirus.fr/" },
-      { name: "og:url", content: "https://www.cascoronavirus.fr/" },
+      { name: "og:site_name", content: "https://casoscovid19.com" },
+      { name: "og:url", content: "https://casoscovid19.com" },
       {
         name: "og:title",
         content:
@@ -35,27 +32,24 @@ export class CoronavirusLinksComponent implements OnInit {
       },
       {
         name: "og:description",
-        content:
-          "Cas de Coronavirus COVID-19 - Suivez les cas et morts du virus en France et dans le monde entier : Chine, Italie, Espagne avec des statistiques détaillées en temps réel"
+        content: "Casos de covid19 en Ecuador y el mundo"
       },
       {
         name: "og:image",
-        content: "https://www.cascoronavirus.fr/assets/images/meta_og.png"
+        content: "https://casoscovid19.com/assets/images/meta_og.png"
       },
       { name: "twitter:card", content: "summary" },
       {
         name: "twitter:title",
-        content:
-          "Cas de Coronavirus : suivez les cas du COVID-19 en France et dans le monde"
+        content: "Casos de covid19 en Ecuador y el mundo"
       },
       {
         name: "twitter:description",
-        content:
-          "Cas de Coronavirus COVID-19 - Suivez les cas et morts du virus en France et dans le monde entier : Chine, Italie, Espagne avec des statistiques détaillées en temps réel"
+        content: "Casos de covid19 en Ecuador y el mundo"
       },
       {
         name: "twitter:image",
-        content: "https://www.cascoronavirus.fr/assets/images/meta_og.png"
+        content: "https://casoscovid19.com/assets/images/meta_og.png"
       },
       { name: "twitter:site", content: "@juanitourquiza" }
     ];

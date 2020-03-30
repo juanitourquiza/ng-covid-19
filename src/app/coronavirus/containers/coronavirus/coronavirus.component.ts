@@ -117,8 +117,8 @@ export class CoronavirusComponent implements OnInit {
         content: "Casos de COVID-19"
       },
       { name: "og:type", content: "website" },
-      { name: "og:site_name", content: "https://covid19.hackeruna.com/" },
-      { name: "og:url", content: "https://covid19.hackeruna.com/" },
+      { name: "og:site_name", content: "https://casoscovid19.com/" },
+      { name: "og:url", content: "https://casoscovid19.com/" },
       {
         name: "og:title",
         content: "Casos de COVID-19"
@@ -153,10 +153,10 @@ export class CoronavirusComponent implements OnInit {
         content: `Casos de COVID-19 ${this.selectedCountry.translation}`
       },
       { name: "og:type", content: "website" },
-      { name: "og:site_name", content: "https://covid19.hackeruna.com/" },
+      { name: "og:site_name", content: "https://casoscovid19.com/" },
       {
         name: "og:url",
-        content: `https://covid19.hackeruna.com/stats/${this.selectedCountry.slug}`
+        content: `https://casoscovid19.com//stats/${this.selectedCountry.slug}`
       },
       {
         name: "og:title",
