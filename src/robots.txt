@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cascoronavirus.fr/sitemap.xml
+Sitemap: https://casoscovid19.com/sitemap.xml

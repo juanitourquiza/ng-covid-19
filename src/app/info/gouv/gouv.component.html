@@ -3,9 +3,10 @@
   <h1 class="title">
     Información del gobierno del Ecuador sobre Coronavirus COVID-19
   </h1>
-  <p>
-    <a class="twitter-timeline" href="https://twitter.com/Lenin">Tweets by Lenin</a>
-  </p>
+
+  <!-- You can now use the library component in app.component.html -->
+  <ngx-twitter-timeline [data]="{sourceType: 'url', url: 'https://twitter.com/lenin'}" [opts]="{tweetLimit: 10}">
+  </ngx-twitter-timeline>
 
   <strong>
     <a href="https://coronavirusecuador.com/" target="_blank" rel="noopener noreferrer">Información oficial</a>
