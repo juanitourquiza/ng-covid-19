@@ -1,10 +1,10 @@
 <div class="content">
-  <h1 class="title">Casos de Covid 19 por país</h1>
+  <h1 class="title">Casos Coronavirus COVID-19 por País</h1>
   <ul>
     <li *ngFor="let country of countries">
-      <a href [routerLink]="['/stats', country.slug]" title="Casos de COVID-19 : {{country.country}}">
-        <img *ngIf="country.code" src="https://www.countryflags.io/{{country.code}}/flat/32.png" />
-        Casos de COVID-19 : {{country.translation}}
+      <a href [routerLink]="['/stats', country.slug]" title="Cas de Coronavirus COVID-19 : {{country.country}}">
+        <img [width]="32" [height]="32" [src]="country.flag" />
+        Casos de Coronavirus COVID-19 : {{country.translation}}
       </a>
     </li>
   </ul>

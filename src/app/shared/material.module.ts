@@ -5,7 +5,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatRadioModule } from '@angular/material/radio';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [],
   exports: [
@@ -14,7 +15,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatProgressSpinnerModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    MatRadioModule,
+    MatInputModule
   ],
   imports: [
     MatTableModule,
@@ -22,7 +25,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatProgressSpinnerModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    MatRadioModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }

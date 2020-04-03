@@ -1,0 +1,11 @@
+<div class="content">
+  <h2 class="title">{{labelText}}</h2>
+  <div id="chart-age"></div>
+</div>
+<div class="radio-buttons">
+  <mat-radio-group aria-label="Sélectionner" [(ngModel)]="dataType" (change)="onSelectTypeChange()">
+    <mat-radio-button value="passage">Passage aux urgences</mat-radio-button>
+    <mat-radio-button value="medical">Actes médicaux</mat-radio-button>
+    <mat-radio-button value="hospital">En hospitalisation</mat-radio-button>
+  </mat-radio-group>
+</div>

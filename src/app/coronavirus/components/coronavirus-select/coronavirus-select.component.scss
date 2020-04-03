@@ -1,0 +1,17 @@
+img {
+  vertical-align: middle;
+}
+
+.content {
+  width: auto;
+}
+
+.mat-select {
+  width: 100%;
+  padding: 0.8em;
+  height: 60px;
+  border: 2px solid lightgrey;
+  &.small {
+    max-width: 400px;
+  }
+}

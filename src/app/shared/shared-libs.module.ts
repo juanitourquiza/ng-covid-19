@@ -4,17 +4,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingPipe } from './pipes/loading.pipe';
 import { SymbolNumberPipe } from './pipes/symbol-number.pipe';
-import { CountryPipe } from './pipes/country.pipe';
-import { OperationPipe } from './pipes/operation.pipe';
+import { CountryTranslationPipe } from './pipes/country-translation.pipe';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 @NgModule({
   declarations: [
     LoadingPipe,
     SymbolNumberPipe,
-    CountryPipe,
-    CountryFilterPipe,
-    OperationPipe
+    CountryTranslationPipe,
+    CountryFilterPipe
   ],
   exports: [
     CommonModule,
@@ -22,9 +20,8 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
     ReactiveFormsModule,
     LoadingPipe,
     SymbolNumberPipe,
-    CountryPipe,
+    CountryTranslationPipe,
     CountryFilterPipe,
-    OperationPipe,
     NgxMatSelectSearchModule
   ],
   imports: [

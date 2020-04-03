@@ -16,24 +16,14 @@ export class CoronavirusLinksComponent implements OnInit {
   }
 
   private initMetaTag(): void {
-    this.title.setTitle("Casos de covid19 en Ecuador y el mundo");
+    this.title.setTitle("Casos Coronavirus");
     const tags = [
-      {
-        name: "description",
-        content: "Casos de covid19 en Ecuador y el mundo"
-      },
+      { name: "description", content: "Casos Coronavirus" },
       { name: "og:type", content: "website" },
-      { name: "og:site_name", content: "https://casoscovid19.com" },
-      { name: "og:url", content: "https://casoscovid19.com" },
-      {
-        name: "og:title",
-        content:
-          "Cas Coronavirus - suivez le COVID-19 en France et dans le monde"
-      },
-      {
-        name: "og:description",
-        content: "Casos de covid19 en Ecuador y el mundo"
-      },
+      { name: "og:site_name", content: "https://casoscovid19.com/" },
+      { name: "og:url", content: "https://casoscovid19.com/" },
+      { name: "og:title", content: "Casos Coronavirus" },
+      { name: "og:description", content: "Casos Coronavirus" },
       {
         name: "og:image",
         content: "https://casoscovid19.com/assets/images/meta_og.png"
@@ -41,12 +31,10 @@ export class CoronavirusLinksComponent implements OnInit {
       { name: "twitter:card", content: "summary" },
       {
         name: "twitter:title",
-        content: "Casos de covid19 en Ecuador y el mundo"
+        content:
+          "Cas de Coronavirus : suivez les cas du COVID-19 en France et dans le monde"
       },
-      {
-        name: "twitter:description",
-        content: "Casos de covid19 en Ecuador y el mundo"
-      },
+      { name: "twitter:description", content: "Casos Coronavirus" },
       {
         name: "twitter:image",
         content: "https://casoscovid19.com/assets/images/meta_og.png"

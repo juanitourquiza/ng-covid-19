@@ -1,947 +1,1315 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>https://casoscovid19.com/</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>1.00</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://casoscovid19.com/stats/liens/france</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/infos/enfermedad-coronavirus</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://casoscovid19.com/stats/liens/monde</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/infos/consejos</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://casoscovid19.com/infos/maladie-coronavirus</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/infos/gobierno</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://casoscovid19.com/infos/conseils</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/infos/enfermedad-test-coronavirus</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://casoscovid19.com/infos/gouvernement</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/infos/maladie-test-coronavirus</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/ain</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/aisne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/allier</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/alpes-maritimes</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/alpes-de-haute-provence</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/ardennes</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/ardeche</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/ariege</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/aube</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/aude</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/aveyron</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/bas-rhin</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/bouches-du-rhone</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/calvados</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/cantal</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/charente</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/charente-maritime</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/cher</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/correze</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/corse-du-sud</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/creuse</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/cote-d-or</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/cotes-d-armor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/deux-sevres</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/dordogne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/doubs</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/drome</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/essonne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/eure</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/eure-et-loir</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/finistere</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/gard</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/gers</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/gironde</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/guadeloupe</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/guyane</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/haut-rhin</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/haute-corse</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/haute-garonne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/haute-loire</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/haute-marne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/haute-savoie</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/haute-saone</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/haute-vienne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/hautes-alpes</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/hautes-pyren%C3%A9es</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/hauts-de-seine</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/herault</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/ille-et-vilaine</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/indre</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/indre-et-loire</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/isere</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/jura</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/la-reunion</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/landes</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/loir-et-cher</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/loire</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/loire-atlantique</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/loiret</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/lot</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/lot-et-garonne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/lozere</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/maine-et-loire</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/manche</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/marne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/martinique</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/mayenne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/mayotte</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/meurthe-et-moselle</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/meuse</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/morbihan</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/moselle</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/nievre</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/nord</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/oise</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/orne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/paris</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/pas-de-calais</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/puy-de-dome</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/pyren%C3%A9es-atlantiques</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/pyren%C3%A9es-orientales</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/rhone</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/sarthe</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/savoie</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/saone-et-loire</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/seine-maritime</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/seine-saint-denis</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/seine-et-marne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/somme</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/tarn</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/tarn-et-garonne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/territoire-de%20belfort</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/val-d-oise</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/val-de-marne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/var</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/vaucluse</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/vendee</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/vienne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/vosges</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/yonne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/departement/yvelines</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/auvergne-rhone-alpes</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/bourgogne-franche-comte</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/bretagne</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/centre-val-de-loire</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/corse</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/grand-est</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/hauts-de-france</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/ile-de-france</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/normandie</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/nouvelle-aquitaine</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/occitanie</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/pays-de-la-loire</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/provence-alpes-cote-azur</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/guadeloupe</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/martinique</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/guyane</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/la-reunion</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/france/region/mayotte</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/monde</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/france</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/italy</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/china</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/spain</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/afghanistan</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/albania</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/algeria</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/andorra</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/angola</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/antigua-and-barbuda</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/argentina</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/armenia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/aruba</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/australia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/austria</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/azerbaijan</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/bahamas,-the</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/bahrain</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/bangladesh</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/barbados</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/belarus</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/belgium</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/benin</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/bhutan</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/bolivia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/bosnia-and-herzegovina</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/brazil</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/brunei</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/bulgaria</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/burkina-faso</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/cabo-verde</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/cambodia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/cameroon</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/canada</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/cape-verde</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/central-african-republic</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/chad</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/chile</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/colombia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/congo-%28brazzaville%29</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/congo-%28kinshasa%29</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/costa-rica</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/cote-divoire</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/croatia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/cruise-ship</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/cuba</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/cyprus</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/czechia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/denmark</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/djibouti</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/dominican-republic</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/east-timor</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/ecuador</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/egypt</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/el-salvador</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/equatorial-guinea</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/eritrea</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/estonia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/eswatini</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/ethiopia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/fiji</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/finland</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/french-guiana</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/gabon</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/gambia,-the</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/georgia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/germany</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/ghana</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/greece</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/greenland</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/guadeloupe</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/guam</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/guatemala</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/guernsey</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/guinea</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/guyana</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/haiti</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/holy-see</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/honduras</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/hungary</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/iceland</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/india</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/indonesia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/iran</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/iraq</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/ireland</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/israel</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/jamaica</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/japan</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/jersey</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/jordan</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/kazakhstan</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/kenya</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/korea,-south</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/kosovo</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/kuwait</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/kyrgyzstan</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/latvia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/lebanon</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/liberia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/liechtenstein</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/lithuania</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/luxembourg</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/madagascar</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/malaysia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/maldives</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/malta</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/martinique</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/mauritania</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/mauritius</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/mayotte</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/mexico</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/moldova</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/monaco</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/mongolia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/montenegro</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/morocco</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/namibia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/nepal</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/netherlands</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/new-zealand</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/nicaragua</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/niger</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/nigeria</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/north-macedonia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/norway</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/occupied-palestinian-territory</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/oman</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/pakistan</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/panama</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/papua-new-guinea</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/paraguay</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/peru</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/philippines</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/poland</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/portugal</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/puerto-rico</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/qatar</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/republic-of-the-congo</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/reunion</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/romania</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/russia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/rwanda</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/saint-lucia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/saint-vincent-and-the-grenadines</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/san-marino</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/saudi-arabia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/senegal</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/serbia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/seychelles</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/singapore</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/slovakia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/slovenia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://casoscovid19.com/stats/somalia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/afghanistan</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/south-africa</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/sri-lanka</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/albania</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/sudan</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/algeria</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/suriname</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/germany</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/sweden</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/andorra</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/switzerland</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/angola</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/taiwan*</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/Anguilla</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/tanzania</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/antigua-and-barbuda</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/thailand</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/saudi-arabia</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/the-bahamas</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/argentina</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/the-gambia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/armenia</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/togo</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/aruba</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/trinidad-and-tobago</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/australia</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/tunisia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/austria</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/turkey</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/azerbaijan</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/uganda</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/bahrain</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/ukraine</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/bangladesh</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/barbados</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/belgium</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Belize</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/benin</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Bermuda</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/bhutan</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/belarus</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/bolivia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/bosnia-and-herzegovina</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/brunei</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/brazil</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/bulgaria</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/burkina-faso</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/cambodia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/cameroon</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/canada</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/cabo-verde</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/cape-verde</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/central-african-republic</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/chad</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/chile</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/china</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/cyprus</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/colombia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/congo</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/korea,-south</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/costa-rica</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/croatia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/cuba</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/cote-divoire</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/denmark</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/cruise-ship</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/djibouti</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Dominica</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/egypt</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/united-arab-emirates</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/united-kingdom</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/ecuador</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>https://casoscovid19.com/stats/uruguay</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://casoscovid19.com/stats/eritrea</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/estonia</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/us</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/ethiopia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/fiji</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/finland</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/gabon</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/gambia,-the</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/ghana</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Gibraltar</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Grenada</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/greenland</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/greece</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/guadeloupe</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/guam</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/guatemala</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/guernsey</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/guinea</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/equatorial-guinea</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Guinea-Bissau</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/french-guiana</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/guyana</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/georgia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/haiti</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/honduras</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Hong%20Kong</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/hungary</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Isle%20of%20Man</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Faroe%20Islands</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Turks%20and%20Caicos%20Islands</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Cayman%20Islands</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/india</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/indonesia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/iran</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/iraq</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/ireland</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/iceland</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/israel</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/jamaica</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/japan</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/jersey</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/jordan</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/kazakhstan</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/kenya</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/kyrgyzstan</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/kosovo</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/kuwait</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Lao%20People's%20Democratic%20Republic</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/el-salvador</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/bahamas,-the</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/maldives</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/latvia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/lebanon</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Libyan%20Arab%20Jamahiriya</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/liberia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/liechtenstein</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/lithuania</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/luxembourg</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Macao</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/north-macedonia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Macedonia,%20the%20former%20Yugoslav%20Republic%20of</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/madagascar</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/malaysia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Mali</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/malta</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/morocco</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/martinique</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/mauritius</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/mauritania</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/mayotte</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/mexico</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/moldova</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/monaco</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/mongolia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Montserrat</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/montenegro</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Mozambique</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Myanmar</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/namibia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/nicaragua</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/niger</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/nigeria</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/norway</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/New%20Caledonia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/new-zealand</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/nepal</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/oman</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/uzbekistan</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/pakistan</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/occupied-palestinian-territory</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/panama</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/papua-new-guinea</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/paraguay</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/netherlands</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/philippines</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/poland</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/French%20Polynesia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/puerto-rico</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/peru</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/qatar</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/romania</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/united-kingdom</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/russia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/rwanda</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/dominican-republic</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/czechia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/republic-of-the-congo</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/reunion</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Saint%20Kitts%20and%20Nevis</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/san-marino</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/saint-vincent-and-the-grenadines</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/saint-lucia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/serbia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/seychelles</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/singapore</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/slovakia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/slovenia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/somalia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/sudan</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/sri-lanka</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/switzerland</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/suriname</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/sweden</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Swaziland</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Syrian%20Arab%20Republic</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/senegal</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/taiwan</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/tanzania</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/thailand</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/east-timor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/togo</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/trinidad-and-tobago</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/tunisia</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/turkey</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/Ouganda</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/ukraine</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/uruguay</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://casoscovid19.com/stats/holy-see</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/venezuela</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/vietnam</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/zambia</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://casoscovid19.com/stats/zimbabwe</loc>
-  <lastmod>2020-03-23T22:49:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
-
-
 </urlset>

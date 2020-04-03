@@ -15,6 +15,10 @@ html, body { height: 100%; }
   margin-right: auto;
 }
 
+.mat-radio-button {
+  font-family: inherit;
+}
+
 .chart-legend .legend-label {
   color: black !important;
 }
@@ -60,6 +64,7 @@ html, body { height: 100%; }
 $green: #43D787;
 $info: #0069cc;
 $yellow: 	#ffbb00;
+
 $warning-invert: white;
 $red: 	#f9461c;
 $success-invert: white;
@@ -78,6 +83,37 @@ $success-invert: white;
   color: black;
 }
 
+.mat-select {
+  font-family: inherit;
+}
+
+.radio-buttons {
+  margin-top: 1em;
+  text-align: center;
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+}
+
+.mat-table {
+  font-family: inherit;
+}
+
+.reanimation {
+  color: #E95D0C;
+}
+
+.hospital {
+  color: #F17D07;
+}
+
+/* Bulma */
+
+.input {
+  border: 2px solid lightgrey !important;
+  border-radius: 0px !important;
+  padding: 1.5em !important;
+}
 
 /* Utilities */
 @import "../node_modules/bulma/sass/utilities/_all.sass";
@@ -105,5 +141,17 @@ $success-invert: white;
 @import "../node_modules/bulma/sass/layout/_all.sass";
 
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+  border-color: grey;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+  color: grey;
+  background-color: grey;
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color: grey;
+}

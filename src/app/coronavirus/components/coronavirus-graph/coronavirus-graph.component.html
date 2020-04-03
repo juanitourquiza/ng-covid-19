@@ -1,7 +1,20 @@
-<div class="chart-wrapper">
+<div class="chart-wrapper" *ngIf="!dataFrance">
   <ngx-charts-line-chart [legendPosition]="'below'" [scheme]="colorScheme" [legend]="true"
-    [legendTitle]="'Casos de Covid-19'" [xAxis]="true" [yAxis]="true" [results]="chartDatas" [xAxisLabel]="true"
-    [yAxisLabel]="true">
+    [legendTitle]="'Casos de coronavirus'" [xAxis]="true" [yAxis]="true" [results]="chartDatas" [showRefLines]="true"
+    [xAxisLabel]="true" [yAxisLabel]="true">
   </ngx-charts-line-chart>
+</div>
 
+<div class="content" [style.display]="!dataFrance ? 'none' : 'block'">
+  <h2 class="title">
+    Evolución de pacientes de Coronavirus COVID-19
+  </h2>
+  <div #chartElement id="chart-line"></div>
+  <div class="radio-buttons">
+    <mat-radio-group aria-label="Sélectionner" [(ngModel)]="dataType" (change)="onSelectTypeChange()">
+      <mat-radio-button value="total">Total</mat-radio-button>
+      <mat-radio-button value="men">Hombres</mat-radio-button>
+      <mat-radio-button value="women">Mujeres</mat-radio-button>
+    </mat-radio-group>
+  </div>
 </div>

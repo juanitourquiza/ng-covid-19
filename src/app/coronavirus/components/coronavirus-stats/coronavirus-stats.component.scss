@@ -3,23 +3,14 @@
   font-weight: normal;
 }
 
-.is-warning {
-  &:hover {
-    background-color: orange;
-    cursor: pointer;
-  }
+.reanimation {
+  background-color: #E95D0C;
+  color: white;
+
 }
 
-.is-danger {
-  &:hover {
-    background-color: red;
-    cursor: pointer;
-  }
-}
+.hospital {
+  background-color: #F17D07;
+  color: white;
 
-.is-success {
-  &:hover {
-    background-color: #19d570;
-    cursor: pointer;
-  }
 }
